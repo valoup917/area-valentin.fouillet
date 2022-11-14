@@ -1,0 +1,455 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our twitter services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /twitter
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+  /name:
+    get:
+      summary: Get name
+      description: This route is use to get the user name
+      tags:
+        - /twitter
+      operationId: name
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twittername'
+
+  /username:
+    get:
+      summary: Get username
+      description: This route is use to get the user username
+      tags:
+        - /twitter
+      operationId: name
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twitterusername'
+
+  /bookmarks:
+    get:
+      summary: Get bookmarks
+      description: This route is use to get the user bookmarks
+      tags:
+        - /twitter
+      operationId: bookmarks
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twitterbookemarks'
+
+  /messages:
+    get:
+      summary: Get messages
+      description: This route is use to get the user private messages
+      tags:
+        - /twitter
+      operationId: messages
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twittermessages'
+
+  /userTweets:
+    get:
+      summary: Get tweets
+      description: This route is use to get the user tweets
+      tags:
+        - /twitter
+      operationId: userTweets
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twittertweets'
+
+  /following:
+    get:
+      summary: Get following users
+      description: This route is use to get the following users of a user
+      tags:
+        - /twitter
+      operationId: following
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twitterfollowing'
+
+  /followers:
+    get:
+      summary: Get followers
+      description: This route is use to get the followers of a user
+      tags:
+        - /twitter
+      operationId: followers
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/twitterfollowers'
+
+  /likingUsers:
+    get:
+      summary: Check liked tweets
+      description: This route is use to check if someone liked one of your tweet
+      tags:
+        - /twitter
+      operationId: likingUsers
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization / No likes
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Tweet liked
+
+  /retweetedBy:
+    get:
+      summary: Check retweets
+      description: This route is use to check if someone retweeted one of your tweet
+      tags:
+        - /twitter
+      operationId: retweetedBy
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization / Not retweeted
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Retweeted
+
+  /likedTweets:
+    get:
+      summary: Check tweet
+      description: This route is use to check the users liked a tweet
+      tags:
+        - /twitter
+      operationId: likedTweets
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization / No like
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Liked
+
+  /createTweet:
+    post:
+      summary: Create tweet
+      description: This route is use to create and post a new tweet
+      tags:
+        - /twitter
+      operationId: createTweet
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: text
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need Authorization / need text need Authorization and text
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User nor found
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+components:
+  schemas:
+    twittername:
+      type: object
+      properties:
+        name:
+          type: string
+    twitterusername:
+      type: object
+      properties:
+        name:
+          type: string
+    twitterbookemarks:
+      type: object
+      properties:
+        bookmarks:
+          type: object
+    twittermessages:
+      type: object
+      properties:
+        messages:
+          type: object
+    twittertweets:
+      type: object
+      properties:
+        tweets:
+          type: object
+    twitterfollowing:
+      type: object
+      properties:
+        following:
+          type: object
+    twitterfollowers:
+      type: object
+      properties:
+        followers:
+          type: object

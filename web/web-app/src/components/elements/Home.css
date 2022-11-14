@@ -1,0 +1,73 @@
+.rec {
+  position: relative;
+  display: inline-block;
+  display: flex;
+  height: 500px;
+  background: linear-gradient(90deg, rgb(90, 91, 91) 0%, rgb(0, 0, 0) 100%);
+}
+
+.mercury img{
+  float: left;
+  margin-left: 0px 0px 0px 30px;
+  width: 400px;
+  height: 350px;
+  left: 50%;
+}
+
+.pluto img{
+  position: relative;
+  top: 320px;
+  float: right;
+  margin-left: 0px 0px 0px 30px;
+  width: 260px;
+  height: 180px;
+}
+
+.moon img{
+  float: right;
+  margin-left: 0px 0px 0px 30px;
+  width: 150px;
+  height: 150px;
+}
+
+.acro {
+  position: relative;
+  top: 180px;
+  color: rgb(197, 189, 189);
+  font: bold italic large serif;
+  font-weight: bold ;
+}
+
+.acro2 {
+  position: relative;
+  top: 280px;
+  left: 5%;
+  color: rgb(197, 189, 189);
+  font: bold italic large serif;
+}
+
+/* .recnew {
+  position: relative;
+  width: 116px;
+  top: 50px;
+  left: 50px;
+  background: rgb(122, 117, 117);
+} */
+
+.co {
+  position: relative;
+  width: 130px;
+  left: 500px;
+  top: 150px;
+  font-size: 24px;
+  border-radius: 16%;
+  background: rgb(122, 117, 117);
+}
+
+.new {
+  position: relative;
+  color: rgb(255, 255, 255);
+  font: status-bar;
+  font-size: 12px;
+  border-color: rgb(153, 135, 135);
+}

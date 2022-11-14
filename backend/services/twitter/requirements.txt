@@ -1,0 +1,4 @@
+Flask
+unittest2
+configparser
+requests

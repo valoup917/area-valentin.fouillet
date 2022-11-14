@@ -1,0 +1,132 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Database_Interaction/1.0.0
+info:
+  version: "1.0.0"
+  title: Discord Interaction
+  description: The API Interact with the Discord service in the AREA project
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /Discord
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /announcement:
+    get:
+      summary: announcement
+      description: Send a message in every server the bot is
+      tags:
+        - /Discord
+      operationId: announcement
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /message:
+    get:
+      summary: Send message
+      description: Send the message contained in the body to the user
+      tags:
+        - /Discord
+      operationId: message
+      parameters:
+        - name: messageContent
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Message sent in channel : channel_name"
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Empty messageContent / access_token User does not appear in any server the bot is in / Could not find channel : channel_name"
+
+  /sendrandommeme:
+    get:
+      summary: Send meme
+      description: check if the server in running
+      tags:
+        - /Discord
+      operationId: sendrandommeme
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Meme sent in channel : channel_name"
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Empty access_token / User does not appear in any server the bot is in / Could not find channel : channel_name"
+
+  /sendrandomgif:
+    get:
+      summary: Send gif
+      description: check if the server in running
+      tags:
+        - /Discord
+      operationId: sendrandomgif
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "GIF sent in channel : channel_name"
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Empty access_token / User does not appear in any server the bot is in / Could not find channel : channel_name"

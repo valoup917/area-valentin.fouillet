@@ -1,0 +1,319 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our IPFS services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - //ipfs
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /bootstraprmall:
+    get:
+      summary: RM bootstrap nodes
+      tags:
+        - /ipfs
+      description: This route is used to rm all bootstrap nodes
+      operationId: bootstraprmall
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad request
+
+  /filesmkdir:
+    post:
+      summary: create directory in MFS
+      tags:
+        - /ipfs
+      description: This route is used to create a directory in MFS
+      operationId: filesmkdir
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad request
+
+  /pinadd:
+    post:
+      summary: pin file in datastore
+      tags:
+        - /ipfs
+      description: This route is used to pin a file in your datastore
+      operationId: pinadd
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: wrong
+
+  /bootstraplist:
+    get:
+      summary: check is list
+      tags:
+        - /ipfs
+      description: This route is used to send a 200 if your bootstrap list is greater than 6
+      operationId: bootstraplist
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: length of list
+
+  /bootstrapadd:
+    post:
+      summary: add bootstrop node
+      tags:
+        - /ipfs
+      description: This route is used to add a bootstrap node
+      operationId: bootstrapadd
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: length of list
+
+  /bootstrapadddefault:
+    post:
+      summary: add default bootstrop node
+      tags:
+        - /ipfs
+      description: This route is used to add default bootstrap node
+      operationId: bootstrapadddefault
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: error occured
+
+  /pinrm:
+    post:
+      summary: rm pined file
+      tags:
+        - /ipfs
+      description: This route is used to rm a file pined
+      operationId: pinrm
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: error occured
+
+  /get:
+    post:
+      summary: get file from networks
+      tags:
+        - /ipfs
+      description: This route is used to get a file from the networks
+      operationId: get
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: error occured
+
+  /swarmconnect:
+    post:
+      summary: connect swain to peer
+      tags:
+        - /ipfs
+      description: This route is used to connect with swarm to a peer
+      operationId: swarmconnect
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: error occured
+
+  /swarmdisconnect:
+    post:
+      summary: disconnect from swarn to peer
+      tags:
+        - /ipfs
+      description: This route is used to disconnect from swarm to a peer
+      operationId: swarmdisconnect
+      parameters:
+        - name: data
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: error occured
+
+  /shutdown:
+    get:
+      summary: shutdown node
+      tags:
+        - /ipfs
+      description: This route is used to shutdown your node
+      operationId: shutdown
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: error occured

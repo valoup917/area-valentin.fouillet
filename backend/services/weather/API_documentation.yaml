@@ -1,0 +1,416 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Database_Interaction/1.0.0
+info:
+  version: "1.0.0"
+  title: Weather API
+  description: The API to interact with our weather service
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      operationId: ping
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: OK
+
+  /toHot:
+    get:
+      summary: Check if it's to hot
+      description: check the temperature and if it's more than 25 degrees return 200, 400 otherwise
+      operationId: toHot
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: To hot !
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not to hot
+
+  /toCold:
+    get:
+      summary: Check if it's to Cold
+      description: Check the temperature and if it's less than 10 degrees return 200, 400 otherwise
+      operationId: toCold
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: To Cold !
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not to Cold
+
+  /tempusercheckmore:
+    get:
+      summary: Check if guess of the user is correct
+      description: Check the temperature and if the actual temperature is superior as the one given by the user return 200, 400 otherwise 
+      operationId: tempusercheckmore
+      tags:
+        - /Weather
+      parameters:
+        - name: usr
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Hotter
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Colder / temp must be a temperature
+
+  /tempusercheckless:
+    get:
+      summary: Check if guess of the user is correct
+      description: Check the temperature and if the actual temperature is inferior as the one given by the user return 200, 400 otherwise 
+      operationId: tempusercheckless
+      tags:
+        - /Weather
+      parameters:
+        - name: usr
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Colder
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Hotter / temp must be a temperature
+
+  /toWet:
+    get:
+      summary: Check if it's to wet
+      description: check the humidity and if it's more than 75 percent return 200, 400 otherwise
+      operationId: toWet
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: To Wet !
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not to Wet
+
+  /toDry:
+    get:
+      summary: Check if it's to dry
+      description: Check the humidity and if it's less than 40 percent return 200, 400 otherwise
+      operationId: toDry
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: To Dry !
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not to Dry
+
+  /humusercheckmore:
+    get:
+      summary: Check if guess of the user is correct
+      description: Check the temperature and if the actual temperature is superior as the one given by the user return 200, 400 otherwise 
+      operationId: humusercheckmore
+      tags:
+        - /Weather
+      parameters:
+        - name: usr
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Wetter
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Dryer / temp must be a temperature
+
+  /humusercheckless:
+    get:
+      summary: Check if guess of the user is correct
+      description: Check the temperature and if the actual temperature is inferior as the one given by the user return 200, 400 otherwise 
+      operationId: humusercheckless
+      tags:
+        - /Weather
+      parameters:
+        - name: usr
+          in: query
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Dryer
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: It's Wetter / hum must be a percentage
+
+  /below10:
+    get:
+      summary: Temperature inferior 10 degrees
+      description: Check the temperature and if the actual temperature is < 10 degrees
+      operationId: below10
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Below 10 degrees
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not below 10 degrees
+
+  /below0:
+    get:
+      summary: Temperature inferior 0 degrees
+      description: Check the temperature and if the actual temperature is < 0 degrees
+      operationId: below0
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Below 0 degrees
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not below 0 degrees
+
+  /above20:
+    get:
+      summary: Temperature superior 20 degrees
+      description: Check the temperature and if the actual temperature is > 20 degrees
+      operationId: above20
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Above 20 degrees
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not above 20 degrees
+
+  /above30:
+    get:
+      summary: Temperature superior 30 degrees
+      description: Check the temperature and if the actual temperature is > 30 degrees
+      operationId: above30
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Above 30 degrees
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not above 30 degrees
+
+  /verycloudy:
+    get:
+      summary: Check if cloudy outside
+      description: Check if it is cloudy outside
+      operationId: verycloudy
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Cloudy
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not cloudy
+
+  /raining:
+    get:
+      summary: Check if raining outside
+      description: Check if it is raining outside
+      operationId: raining
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Raining
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not raining
+
+  /snowing:
+    get:
+      summary: Check if snowing outside
+      description: Check if it is snowing outside
+      operationId: snowing
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Snowing
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not snowing
+
+  /windy:
+    get:
+      summary: Check if windy outside
+      description: Check if the wind gust are > 12 km/h
+      operationId: windy
+      tags:
+        - /Weather
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Windy
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not windy

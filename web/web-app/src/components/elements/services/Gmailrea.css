@@ -1,0 +1,243 @@
+.backgm {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(136, 136, 136), rgb(255, 255, 255) 100%);
+}
+
+.gml {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 10%;
+    left: -15%;
+}
+
+.buttongit {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.namegml {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 40px;
+    left: -15%;
+}
+
+.descripgml {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 40px;
+    margin-right: 100px;
+    padding: 35px;
+    left: -15%;
+}
+
+.gobackgml {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(136, 136, 136);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobackgml:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.gract1 {
+    position: relative;
+    top: 90px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.graction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.gract1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.gract2 {
+    position: relative;
+    top: 130px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.graction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.gract2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.gract3 {
+    position: relative;
+    top: 110px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.graction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.gract3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.grrea3 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.gaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.grea3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.gact4 {
+    position: relative;
+    top: 190px;
+    left: -3%;
+    width: 200px;
+    height: 200px;
+    background:rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.gaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.gact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.gact5 {
+    position: relative;
+    top: 190px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(136, 136, 136);
+    border-radius: 10px;
+}
+
+.gaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.gact5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.gact6 {
+    position: relative;
+    top: 230px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.gaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.gact6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

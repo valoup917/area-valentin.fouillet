@@ -1,0 +1,56 @@
+.card {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    background: rgb(21, 206, 129);
+  }
+
+.rectangle_2 {
+    position: relative;
+    top: 350px;
+    left: 0px;
+    display: inline-block;
+    width: 500px;
+    height: 300px;
+    background: rgb(21, 206, 129);
+    border-radius: 10%;
+  }
+
+.icon-button svg {
+  fill: var(--text-color);
+  width: 20px;
+  height: 20px;
+}
+
+.dropdown {
+  position: absolute;
+  top: auto;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+}
+
+.button_letsgo {
+  background-color: #12e973;
+  left: 500px;
+  color: white;
+  padding: 3px 4px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 15px;
+}

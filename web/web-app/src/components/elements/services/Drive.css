@@ -1,0 +1,268 @@
+.backdrive {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(149, 150, 151), rgb(255, 255, 255) 100%);
+}
+
+.driveacar {
+    position: relative;
+    display: block;
+    left: 0%;
+    margin: auto;
+    width: 8%;
+    top: 40px;
+    left: -15%;
+}
+
+.button {
+    position: relative;
+    top: 0px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.namedri {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 50px;
+    left: -15%;
+}
+
+.descripdri {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 19px;
+    margin-right: 100px;
+    padding: 35px;
+    left: -15%;
+}
+
+.gobackdri {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(119, 119, 119);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobackdri:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.dract1 {
+    position: relative;
+    top: 100px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(149, 150, 151);
+    border-radius: 10px;
+}
+
+.drreaction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.dract1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.dract2 {
+    position: relative;
+    top: 140px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(149, 150, 151);
+    border-radius: 10px;
+}
+
+.drreaction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.dract2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.dract3 {
+    position: relative;
+    top: 120px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(149, 150, 151);
+    border-radius: 10px;
+}
+
+.drreaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.dract3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.drrea3 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(114,137,218);
+    border-radius: 10px;
+}
+
+.drreaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.drrea3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.dract4 {
+    position: relative;
+    top: 150px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(114,137,218);
+    border-radius: 10px;
+}
+
+.drreaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.dract4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.dract5 {
+    position: relative;
+    top: 150px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(114,137,218);
+    border-radius: 10px;
+}
+
+.reaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.act5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.act6 {
+    position: relative;
+    top: 169px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(114,137,218);
+    border-radius: 10px;
+}
+
+.reaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.act6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.dract7 {
+    position: relative;
+    top: 169px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.drreaction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.dract7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

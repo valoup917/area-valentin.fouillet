@@ -1,0 +1,258 @@
+.backmuslim {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(6, 0, 95), rgb(255, 255, 255) 100%);
+}
+
+.coucoulesmusulmans {
+    position: relative;
+    display: block;
+    left: 0%;
+    margin: auto;
+    width: 12%;
+    top: 40px;
+    left: 5%;
+}
+
+.button {
+    position: relative;
+    top: 0px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.namemus {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 50px;
+    left: 5%;
+}
+
+.descripmusul {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 40px;
+    margin-right: 100px;
+    padding: 35px;
+    left: 5%;
+}
+
+.gobackmusl {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(6, 0, 95);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobackdri:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.musact1 {
+    position: relative;
+    top: 130px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(6, 0, 95);
+    border-radius: 10px;
+}
+
+.musaction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.musact1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.musact2 {
+    position: relative;
+    top: 130px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background:rgb(6, 0, 95);
+    border-radius: 10px;
+}
+
+.musaction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.musact2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.musact3 {
+    position: relative;
+    top: 130px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(6, 0, 95);
+    border-radius: 10px;
+}
+
+.musaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.musact3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.musaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.musact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.musact4 {
+    position: relative;
+    top: 190px;
+    left: -3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(6, 0, 95);
+    border-radius: 10px;
+}
+
+.musaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.musact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.musact5 {
+    position: relative;
+    top: 190px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(6, 0, 95);
+    border-radius: 10px;
+}
+
+.musaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.musact5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.act6 {
+    position: relative;
+    top: 169px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(114,137,218);
+    border-radius: 10px;
+}
+
+.reaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.act6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.dract7 {
+    position: relative;
+    top: 200px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.drreaction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.dract7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

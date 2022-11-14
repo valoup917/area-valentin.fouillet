@@ -1,0 +1,151 @@
+.backi {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(27, 95, 104), rgb(255, 255, 255) 100%);
+}
+
+.ipsfesse {
+    position: relative;
+    display: block;
+    margin: auto;
+    top: -10px;
+    width: 40%;
+    left: -40%;
+}
+
+.Reactions1 {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 450px;
+}
+
+.Connectelse1 {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top:800px;
+}
+
+.descrip2 {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 0px;
+    padding: 35px;
+    left: -15%;
+}
+
+.nameipfsss {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 30px;
+    left: -40%;
+}
+
+.buttonco {
+    position: relative;
+    width: 130px;
+    left: 0px;
+    top: -65px;
+    font-size: 24px;
+    border-radius: 20%;
+    border: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    font: bold large;
+}
+
+.returnbut {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    left: -850px;
+    top: -500px;
+    font-size: 24px;
+    border-radius: 20%;
+    border: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    font: bold large;
+}
+
+.ipfsact1 {
+    position: relative;
+    top: 130px;
+    left: 0%;
+    width: 220px;
+    height: 220px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.ipfsrea2 {
+    position: relative;
+    top: 500px;
+    left: 0%;
+    width: 220px;
+    height: 220px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.ipfsrea3 {
+    position: relative;
+    top: 200px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.ipfsact2 {
+    position: relative;
+    top: -40px;
+    left: 0%;
+    width: 220px;
+    height: 220px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.ipfsact3 {
+    position: relative;
+    top: -40px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.ipfsact1:hover{
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsact2:hover{
+    opacity: 0.8;
+}
+
+.ipfsact3:hover{
+    opacity: 0.8;
+}
+
+.ipfsrea3:hover{
+    opacity: 0.8;
+}
+
+.ipfsrea1:hover{
+    opacity: 0.8;
+}
+
+.ipfsrea2:hover{
+    opacity: 0.8;
+}

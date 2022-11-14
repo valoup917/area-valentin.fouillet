@@ -1,0 +1,27 @@
+Fake server started on port 3001
+node:events:491
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3001
+    at Server.setupListenHandle [as _listen2] (node:net:1485:16)
+    at listenInCluster (node:net:1533:12)
+    at Server.listen (node:net:1621:7)
+    at Function.listen (/Users/valoup/tek/tek3/area/backend/gateway/fakeapi/node_modules/express/lib/application.js:635:24)
+    at Object.<anonymous> (/Users/valoup/tek/tek3/area/backend/gateway/fakeapi/server.js:14:5)
+    at Module._compile (node:internal/modules/cjs/loader:1119:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1173:10)
+    at Module.load (node:internal/modules/cjs/loader:997:32)
+    at Module._load (node:internal/modules/cjs/loader:838:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1512:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::',
+  port: 3001
+}
+
+Node.js v18.9.0

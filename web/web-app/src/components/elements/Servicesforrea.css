@@ -1,0 +1,374 @@
+.center {
+    display: flex;
+}
+.choose-services {
+    position: relative;
+    top: 50px;
+    left: 0%;
+    color: rgb(0, 0, 0);
+    font: bold large serif;
+}
+
+
+.firstrec {
+    position: relative;
+    padding-right: 40px;
+    top: 100px;
+    left: 0%;
+    width: 1200px;
+    height: 1000px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    opacity: 1;
+}
+
+
+.button_serv1 {
+    position: relative;
+    top: 55px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(119, 53, 226);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(81, 0, 211);
+}
+
+.button_serv1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.discorddd img {
+    position: relative;
+    left: 0%;
+    top: 23px;
+    margin-left: 0px 0px 0px 30px;
+    width: 100px;
+    height: 100px;
+}
+
+.dis {
+    position: relative;
+    top: 30px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+
+.gtb {
+    position: relative;
+    top: 20px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv3 {
+    position: relative;
+    top: 65px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.github img {
+    position: relative;
+    left: 0%;
+    top: 20px;
+    margin-left: 0px 0px 0px 30px;
+    width: 220px;
+    height: 120px;
+}
+
+.serv3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv6 {
+    position: relative;
+    top: 45px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(52, 146, 235);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 96, 185);
+}
+
+.twit img {
+    position: relative;
+    left: 0%;
+    top: 25px;
+    margin-left: 0px 0px 0px 30px;
+    width: 100px;
+    height: 80px;
+}
+
+.twitter {
+    position: relative;
+    top: 40px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv7 {
+    position: relative;
+    top: 45px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgb(235, 235, 235);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(114, 114, 114);
+}
+
+.gmail img{
+    position: relative;
+    left: 0%;
+    top: 15px;
+    margin-left: 0px 0px 0px 30px;
+    width: 90px;
+    height: 80px;
+}
+
+.icilemail {
+    position: relative;
+    top: 40px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv8 {
+    position: relative;
+    top: 86px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(250, 187, 187);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(182, 109, 109);
+}
+
+.ohhhhhcal img{
+    position: relative;
+    left: 0%;
+    top: 20px;
+    margin-left: 0px 0px 0px 30px;
+    width: 90px;
+    height: 90px;
+}
+
+.nicecalendar {
+    position: relative;
+    top: 35px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv8:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv9 {
+    position: relative;
+    top: 90px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(83, 195, 199);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(43, 136, 139);
+}
+
+.ipfs img{
+    position: relative;
+    left: 0%;
+    top: 15px;
+    margin-left: 0px 0px 0px 30px;
+    width: 200px;
+    height: 100px;
+}
+
+.ipfss {
+    position: relative;
+    top: 30px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv9:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv10 {
+    position: relative;
+    top: 86px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.spot img{
+    position: relative;
+    left: 0%;
+    top: 15px;
+    margin-left: 0px 0px 0px 30px;
+    width: 90px;
+    height: 90px;
+}
+
+.spotify {
+    position: relative;
+    top: 30px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv10:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv12 {
+    position: relative;
+    top: 86px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgb(137, 46, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(104, 34, 196);
+}
+
+.twitch img{
+    position: relative;
+    left: 0%;
+    top: 15px;
+    margin-left: 0px 0px 0px 30px;
+    width: 140px;
+    height: 90px;
+}
+
+.twch {
+    position: relative;
+    top: 30px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv12:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv13 {
+    position: relative;
+    top: 140px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background:  rgb(235, 235, 235);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(134, 134, 134);
+}
+
+.drive img {
+    position: relative;
+    left: 0%;
+    top: 23px;
+    margin-left: 0px 0px 0px 30px;
+    width: 90px;
+    height: 90px;
+}
+
+.drv {
+    position: relative;
+    top: 35px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv13:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv15 {
+    position: relative;
+    top: 130px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background:  rgb(6, 0, 95);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(4, 0, 54);
+}
+
+.muslim img {
+    position: relative;
+    left: 0%;
+    top: 23px;
+    margin-left: 0px 0px 0px 30px;
+    width: 45%;
+}
+
+.muss {
+    position: relative;
+    top: 35px;
+    left: 0%;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.serv15:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.serv14 {
+    position: relative;
+    top: 190px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}

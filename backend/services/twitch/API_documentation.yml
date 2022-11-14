@@ -1,0 +1,348 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our twitch services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /twitch
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /userName:
+    get:
+      summary: Get username
+      description: This route is use to get the username
+      tags:
+        - /twitch
+      operationId: userName
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: username
+
+  /userDescription:
+    get:
+      summary: Get description
+      description: This route is use to get the user description
+      tags:
+        - /twitch
+      operationId: userDescription
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user description
+
+  /userProfileImage:
+    get:
+      summary: Get profile image
+      description: This route is use to get the user profile image
+      tags:
+        - /twitch
+      operationId: userProfileImage
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: link to profile image
+
+  /userEmail:
+    get:
+      summary: Get profile email
+      description: This route is use to get the user email
+      tags:
+        - /twitch
+      operationId: userEmail
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user email
+
+  /changeDescription:
+    get:
+      summary: Change description
+      description: This route is use to change the description of a user
+      tags:
+        - /twitch
+      operationId: changeDescription
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: description
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need description
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /userFollowers:
+    get:
+      summary: Get user followers
+      description: This route is use to get the user followers
+      tags:
+        - /twitch
+      operationId: userFollowers
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user followers
+
+  /userBlockedUsers:
+    get:
+      summary: Get blocked user
+      description: This route is use to get the blocked user of a user
+      tags:
+        - /twitch
+      operationId: userBlockedUsers
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: block users
+
+  /userPlaylists:
+    get:
+      summary: Get user playlist
+      description: This route is use to get the user playlist
+      tags:
+        - /twitch
+      operationId: userPlaylists
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user playlist
+
+  /userFollowing:
+    get:
+      summary: Get following user
+      description: This route is use to get the following users of a user
+      tags:
+        - /twitch
+      operationId: userFollowing
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user playlist
+
+  /userVideos:
+    get:
+      summary: Get user video
+      description: This route is use to get the video of a user
+      tags:
+        - /twitch
+      operationId: userVideos
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user playlist
+
+  /raidUser:
+    get:
+      summary: Raid user
+      description: This route is use to raid a user
+      tags:
+        - /twitch
+      operationId: raidUser
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user playlist

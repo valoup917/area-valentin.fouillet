@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "186275522212",
+    "project_id": "staive-flutter-firebase",
+    "storage_bucket": "staive-flutter-firebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:186275522212:android:97b53144131f8f9076a831",
+        "android_client_info": {
+          "package_name": "com.staive.app.mobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "186275522212-gov10b7legsfvql8s78c8m2503e4us71.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-4ckf5763ltbnP_totfAF4V4p5D6Ms7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "186275522212-gov10b7legsfvql8s78c8m2503e4us71.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "186275522212-epelr0ftbp19u9777tu70hhfpcdtrnpl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.staive.app.mobile"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

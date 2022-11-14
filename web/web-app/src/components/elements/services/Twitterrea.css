@@ -1,0 +1,302 @@
+.backgtw {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(29,161,242), rgb(255, 255, 255) 100%);
+}
+
+.tw {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 10%;
+    top: 30px;
+    left: -15%;
+}
+
+.button {
+    position: relative;
+    top: 0px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.nametw {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 40px;
+    left: -15%;
+}
+
+.descriptw {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 30px;
+    margin-right: 100px;
+    padding: 35px;
+    left: -15%;
+}
+
+.gobacktw {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(149, 208, 245);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobacktw:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.tract1 {
+    position: relative;
+    top: 130px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.traction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tract1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact2 {
+    position: relative;
+    top: 130px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact3 {
+    position: relative;
+    top: 130px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.eytaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.trea3 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.trea3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact4 {
+    position: relative;
+    top: 170px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background:rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact5 {
+    position: relative;
+    top: 190px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact6 {
+    position: relative;
+    top: 190px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact7 {
+    position: relative;
+    top: 230px;
+    left: -2%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+
+.tact8 {
+    position: relative;
+    top: 230px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29,161,242);
+    border-radius: 10px;
+}
+
+.taction8 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.tact8:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.tact9 {
+    position: relative;
+    top: 300px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}

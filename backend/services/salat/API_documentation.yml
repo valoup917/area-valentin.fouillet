@@ -1,0 +1,277 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our salat services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /salat
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /asr:
+    get:
+      summary: Check asr
+      description: This route is use to check if it is time for asr prayer
+      tags:
+        - /salat
+      operationId: asr
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /dhuhr:
+    get:
+      summary: Check dhuhr
+      description: This route is use to check if it is time for dhuhr prayer
+      tags:
+        - /salat
+      operationId: dhuhr
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /fajr:
+    get:
+      summary: Check fajr
+      description: This route is use to check if it is time for fajr prayer
+      tags:
+        - /salat
+      operationId: fajr
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /firstthird:
+    get:
+      summary: Check firstthird
+      description: This route is use to check if it is time for firstthird prayer
+      tags:
+        - /salat
+      operationId: firstthird
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /imsak:
+    get:
+      summary: Check imsak
+      description: This route is use to check if it is time for imsak prayer
+      tags:
+        - /salat
+      operationId: imsak
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /isha:
+    get:
+      summary: Check isha
+      description: This route is use to check if it is time for isha prayer
+      tags:
+        - /salat
+      operationId: isha
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /lastthird:
+    get:
+      summary: Check lastthird
+      description: This route is use to check if it is time for lastthird prayer
+      tags:
+        - /salat
+      operationId: lastthird
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /maghrib:
+    get:
+      summary: Check maghrib
+      description: This route is use to check if it is time for maghrib prayer
+      tags:
+        - /salat
+      operationId: maghrib
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /midnight:
+    get:
+      summary: Check midnight
+      description: This route is use to check if it is time for midnight prayer
+      tags:
+        - /salat
+      operationId: midnight
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /sunrise:
+    get:
+      summary: Check sunrise
+      description: This route is use to check if it is time for sunrise prayer
+      tags:
+        - /salat
+      operationId: sunrise
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time
+
+  /sunset:
+    get:
+      summary: Check sunset
+      description: This route is use to check if it is time for sunset prayer
+      tags:
+        - /salat
+      operationId: sunset
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not time

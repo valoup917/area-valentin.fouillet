@@ -1,0 +1,53 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our linkedin services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /linkedin
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /userEmail:
+    get:
+      summary: get user email
+      tags:
+        - /linkedin
+      description: This route is used to get the user email
+      operationId: userEmail
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization

@@ -1,0 +1,629 @@
+[
+    {
+        "name" : "discord",
+        "actions": [],
+        "reactions": [
+            {
+                "name": "send_a_random_gif",
+                "description": "Send a random gif in a group discord"
+            },
+            {
+                "name": "send_a_random_meme",
+                "description": "Send a random meme in a group discord"
+            },
+            {
+                "name": "send_message",
+                "description": "Send a custom message in a group discord"
+            }
+        ]
+    },
+    {
+        "name": "weather",
+        "actions": [
+            {
+                "name": "to Hot",
+                "description": "Check if temperature is above 20 degrees"
+            },
+            {
+                "name": "to Cold",
+                "description": "Check if temperature is below 10 degrees"
+            },
+            {
+                "name": "to Wet",
+                "description": "Check if humidity is above 75 percent"
+            },
+            {
+                "name": "to Dry",
+                "description": "Check if humidity is below 40 percent"
+            },
+            {
+                "name": "Check if temperature superior",
+                "description": "Check if the actual temperature is superior as the one given"
+            },
+            {
+                "name": "Check if temperature inferior",
+                "description": "Check if the actual temperature is inferior as the one given"
+            },
+            {
+                "name": "Check if humidity superior",
+                "description": "Check if the actual humidity is superior as the one given"
+            },
+            {
+                "name": "Check if humidity inferior",
+                "description": "Check if the actual humidity is inferior as the one given"
+            },
+            {
+                "name": "below10",
+                "description": "Check if the temperature is < 10 degrees"
+            },
+            {
+                "name": "below0",
+                "description": "Check if the temperature is < 0 degrees"
+            },
+            {
+                "name": "above20",
+                "description": "Check if the temperature is > 20 degrees"
+            },
+            {
+                "name": "above30",
+                "description": "Check if the temperature is > 30 degrees"
+            },
+            {
+                "name": "cloudy",
+                "description": "Check if it is cloudy outside"
+            },
+            {
+                "name": "snowing",
+                "description": "Check if it is snowing outside"
+            },
+            {
+                "name": "raining",
+                "description": "Check if it is raining outside"
+            },
+            {
+                "name": "windy",
+                "description": "Check if it is windy outside (wind gust > 12 km/h)"
+            }
+        ],
+        "reactions": []
+    },
+    {
+        "name" : "gmail",
+        "actions": [
+            {
+                "name": "get_a_new_mail",
+                "description": "user get a new mail"
+            },
+            {
+                "name": "get_a_new_draft",
+                "description": "user get a new draft"
+            },
+            {
+                "name": "get_a_new_label",
+                "description": "user get a new label"
+            },
+            {
+                "name": "get_a_new_filter",
+                "description": "user get a new filter"
+            },
+            {
+                "name": "get_a_new_sendAs",
+                "description": "get new user who's writing mail"
+            }
+        ],
+        "reactions": [
+            {
+                "name": "update_user_language",
+                "description": "Updates language settings."
+            },
+            {
+                "name": "put_message_in_trash",
+                "description": "Moves the specified message to the trash"
+            },
+            {
+                "name": "send_mail_to_user",
+                "description": "Sends the specified message to the recipients."
+            }
+        ]
+    },
+    {
+        "name": "drive",
+        "actions": [
+            {
+                "name": "get_user_files",
+                "description": "Get a new file in user's Drive."
+            },
+            {
+                "name": "get_user_comment_in_specified_file",
+                "description": "Get a new comment in user's Drive file."
+            }
+        ],
+        "reactions": [
+            {
+                "name": "create_file_in_user_drive",
+                "description": "Creates a new file"
+            },
+            {
+                "name": "delete_file_in_user_drive",
+                "description": "Deletes a file"
+            },
+            {
+                "name": "create_comment_in_user_file",
+                "description": "Creates a new comment on a file"
+            },
+            {
+                "name": "delete_comment_in_user_file",
+                "description": "Deletes a comment on a file"
+            }
+        ]
+    },
+    {
+        "name": "calendar",
+        "actions": [
+            {
+                "name": "get_user_events",
+                "description": "Get a new events in user's calendar."
+            }
+        ],
+        "reactions": [
+            {
+                "name": "create_event_in_user_calendar",
+                "description": "Creates an event"
+            },
+            {
+                "name": "delete_event_in_user_calendar",
+                "description": "Deletes an event."
+            }
+        ]
+    },
+    {
+        "name": "ipfs",
+        "actions": [
+            {
+                "name": "bootstrap list",
+                "description": "send a 200 if your bootstrap list is greater than 6"
+            }
+        ],
+        "reactions": [
+            {
+                "name": "ipfs pin ls",
+                "description": "give you the pined files"
+            },
+            {
+                "name": "ipfs pin add",
+                "description": "pin a file in your datastore"
+            },
+            {
+                "name": "ipfs bootstrap add",
+                "description": "add a bootstrap node"
+            },
+            {
+                "name": "ipfs bootstrap add default",
+                "description": "add default bootstrap node"
+            },
+            {
+                "name": "ipfs bootstrap rm all",
+                "description": "rm all bootstrap nodes"
+            },
+            {
+                "name": "ipfs files mkdir",
+                "description": "create a directory in MFS"
+            },
+            {
+                "name": "ipfs pin rm",
+                "description": "rm a file pined"
+            },
+            {
+                "name": "ipfs get",
+                "description": "get a file from the networks"
+            },
+            {
+                "name": "ipfs swarm connect",
+                "description": "connect with swarm to a peer"
+            },
+            {
+                "name": "ipfs swarm disconnect",
+                "description": "disconnect from swarm to a peer"
+            },
+            {
+                "name": "ipfs shutdown",
+                "description": "shutdown your node"
+            }
+        ]
+    },
+    {
+        "name": "youtube",
+        "actions": [
+            {
+                "name": "get_user_liked_videos",
+                "description": "List of current user liked videos has been changed."
+            },
+            {
+                "name": "get_user_disliked_videos",
+                "description": "List of current user disliked videos has been changed."
+            }
+        ],
+        "reactions": []
+    },
+    {
+        "name": "spotify",
+        "actions": [
+            {
+                "name": "get_user_name",
+                "description": "User name has been changed"
+            },
+            {
+                "name": "get_user_email",
+                "description": "User email has been changed"
+            },
+            {
+                "name": "get_user_followers",
+                "description": "List of user followers has been changed (followers means people follow user)"
+            },
+            {
+                "name": "get_user_profileimg",
+                "description": "User profile image has been changed"
+            },
+            {
+                "name": "get_user_product",
+                "description": "User product has been changed (product means Spotify subscription level ex: premium, free,..)"
+            },
+            {
+                "name": "get_user_following",
+                "description": "List of user following has been changed (following means user follow artist(s))"
+            }
+        ],
+        "reactions": [
+            {
+                "name": "follow_playlist",
+                "description": "Add the current user as a follower of a playlist"
+            },
+            {
+                "name": "pause_playback",
+                "description": "Pause current playback on the user's active device"
+            },
+            {
+                "name": "resume_playback",
+                "description": "Resume current playback on the user's active device"
+            },
+            {
+                "name": "skip_to_next_playback",
+                "description": "Skips to next track in the user’s queue"
+            },
+            {
+                "name": "skip_to_previous_playback",
+                "description": "Skips to previous track in the user’s queue"
+            },
+            {
+                "name": "set_playback_volume",
+                "description": "Set the volume for the user’s current playback device"
+            }
+        ]
+    },
+    {
+        "name": "twitter",
+        "actions": [
+            {
+                "name": "get_profile_name",
+                "description": "Current user profile name has been changed."
+            },
+            {
+                "name": "get_user_name",
+                "description": "Current user name has been changed (ex: @devAntweneee)."
+            },
+            {
+                "name": "get_user_bookmarks",
+                "description": "Get a new tweet in user's bookmarks."
+            },
+            {
+                "name": "get_user_messages",
+                "description": "Get a new message in user's messages list."
+            },
+            {
+                "name": "get_user_tweets",
+                "description": "Get a new tweet by the user."
+            },
+            {
+                "name": "get_user_following",
+                "description": "User follow another user."
+            },
+            {
+                "name": "get_user_followers",
+                "description": "User get a new follower."
+            },
+            {
+                "name": "get_people_who_liked_user_tweets",
+                "description": "Get a new guy that liked user's tweets."
+            },
+            {
+                "name": "get_people_who_retweet_user_tweets",
+                "description": "Get a new guy that retweeted user's tweets."
+            },
+            {
+                "name": "get_user_liked_tweets",
+                "description": "User liked a tweets."
+            }
+        ],
+        "reactions": [
+            {
+                "name": "create_tweet",
+                "description": "Create and Tweets on behalf of a user"
+            }
+        ]
+    },
+    {
+        "name": "coingecko",
+        "actions": [
+            {
+                "name": "existing coin",
+                "description": "check if the coin given exist"
+            },
+            {
+                "name": "check coin price",
+                "description": "check if the price of the coin given in parameter is correct"
+            },
+            {
+                "name": "check change in one hour percentage",
+                "description": "check if the change in one our of the coin given in parameter is correct"
+            },
+            {
+                "name": "check change in one day percentage",
+                "description": "check if the change in one day of the coin given in parameter is correct"
+            },
+            {
+                "name": "check change in one week percentage",
+                "description": "check if the change in one week of the coin given in parameter is correct"
+            },
+            {
+                "name": "bitcoin check coin price",
+                "description": "check the price given and the actual price of bitcoin, 200 if approximately equal"
+            },
+            {
+                "name": "bitcoin check change in one hour",
+                "description": "check the percentage given and the actual change in one hour of bitcoin, 200 if approximately equal"
+            },
+            {
+                "name": "bitcoin check change in one day",
+                "description": "check the percentage given and the actual change in one day of bitcoin, 200 if approximately equal"
+            },
+            {
+                "name": "bitcoin check change in one week",
+                "description": "check the percentage given and the actual change in one week of bitcoin, 200 if approximately equal"
+            },
+            {
+                "name": "ethereum check coin price",
+                "description": "check the price given and the actual price of ethereum, 200 if approximately equal"
+            },
+            {
+                "name": "ethereum check change in one hour",
+                "description": "check the percentage given and the actual change in one hour of ethereum, 200 if approximately equal"
+            },
+            {
+                "name": "ethereum check change in one day",
+                "description": "check the percentage given and the actual change in one day of ethereum, 200 if approximately equal"
+            },
+            {
+                "name": "ethereum check change in one week",
+                "description": "check the percentage given and the actual change in one week of ethereum, 200 if approximately equal"
+            },
+            {
+                "name": "binance usd check coin price",
+                "description": "check the price given and the actual price of binance usd, 200 if approximately equal"
+            },
+            {
+                "name": "binance usd check change in one hour",
+                "description": "check the percentage given and the actual change in one hour of binance usd, 200 if approximately equal"
+            },
+            {
+                "name": "binance usd check change in one day",
+                "description": "check the percentage given and the actual change in one day of binance usd, 200 if approximately equal"
+            },
+            {
+                "name": "binance usd check change in one week",
+                "description": "check the percentage given and the actual change in one week of binance usd, 200 if approximately equal"
+            },
+            {
+                "name": "solana check coin price",
+                "description": "check the price given and the actual price of solana, 200 if approximately equal"
+            },
+            {
+                "name": "solana check change in one hour",
+                "description": "check the percentage given and the actual change in one hour of solana, 200 if approximately equal"
+            },
+            {
+                "name": "solana check change in one day",
+                "description": "check the percentage given and the actual change in one day of solana, 200 if approximately equal"
+            },
+            {
+                "name": "solana check change in one week",
+                "description": "check the percentage given and the actual change in one week of solana, 200 if approximately equal"
+            }
+        ],
+        "reactions": []
+    },
+    {
+        "name": "github",
+        "actions": [
+            {
+                "name": "get_user_name",
+                "description": "Current user name has been changed"
+            },
+            {
+                "name": "get_user_description",
+                "description": "Current user description / bio has been changed"
+            },
+            {
+                "name": "get_user_followers",
+                "description": "List of user followers has been changed"
+            },
+            {
+                "name": "get_user_following",
+                "description": "List of user following has been changed"
+            },
+            {
+                "name": "get_user_repositories",
+                "description": "List of user repositories has been changed"
+            },
+            {
+                "name": "get_user_commits_in_repositories",
+                "description": "List of user commits on each of user repositories has been changed"
+            },
+            {
+                "name": "get_user_branches_in_repositories",
+                "description": "List of user branches on each of user repositories has been changed"
+            }
+        ],
+        "reactions": [
+            {
+                "name": "update_user_name",
+                "description": "Update user name"
+            },
+            {
+                "name": "update_user_email",
+                "description": "Update user email"
+            },
+            {
+                "name": "update_user_description",
+                "description": "Update user description / bio"
+            },
+            {
+                "name": "update_user_email_visibility",
+                "description": "Update user email visibility (means profile is private or public)"
+            },
+            {
+                "name": "create_repository",
+                "description": "Create a new repository on current user profile"
+            }
+        ]
+    },
+    {
+        "name": "twitch",
+        "actions": [
+            {
+                "name": "get_user_name",
+                "description": "User name has been changed"
+            },
+            {
+                "name": "get_user_email",
+                "description": "User email has been changed"
+            },
+            {
+                "name": "get_user_followers",
+                "description": "List of user followers has been changed (followers means people follow user)"
+            },
+            {
+                "name": "get_user_profileimg",
+                "description": "User profile image has been changed"
+            },
+            {
+                "name": "get_user_description",
+                "description": "Current user description has been changed"
+            },
+            {
+                "name": "get_user_following",
+                "description": "List of user following has been changed (following means user follow artist(s))"
+            },
+            {
+                "name": "get_user_blocked_users",
+                "description": "List of user blocked-users has been changed"
+            },
+            {
+                "name": "get_user_playlists",
+                "description": "List of user playlists has been changed"
+            },
+            {
+                "name": "get_user_videos",
+                "description": "List of user videos has been changed"
+            }
+        ],
+        "reactions": [
+            {
+                "name": "update_description",
+                "description": "Update current user description"
+            },
+            {
+                "name": "raid_random_user",
+                "description": "Create a random raid on users that follows current user"
+            }
+        ]
+    },
+    {
+        "name": "linkedin",
+        "actions": [
+            {
+                "name": "get_user_mail_address",
+                "description": "User mail address has been changed"
+            }
+        ],
+        "reactions": [
+            {
+                "name": "create post",
+                "description": "Create a linkedin post with a custom content"
+            }
+        ]
+    },
+    {
+        "name": "riotgame",
+        "actions": [
+            {
+                "name": "maintenance",
+                "description": "I there a maintenance on league of legends"
+            },
+            {
+                "name": "is champion in rotation",
+                "description": "Is the champion given is in the free champion rotation"
+            }
+        ],
+        "reactions": []
+    },
+    {
+        "name": "salat",
+        "actions" : [
+            {
+                "name": "check asr prayer",
+                "description": "check if it's time for asr prayer"
+            },
+            {
+                "name": "check dhuhr prayer",
+                "description": "check if it's time for dhuhr prayer"
+            },
+            {
+                "name": "check fajr prayer",
+                "description": "check if it's time for fajr prayer"
+            },
+            {
+                "name": "check firstthird prayer",
+                "description": "check if it's time for firstthird prayer"
+            },
+            {
+                "name": "check imsak prayer",
+                "description": "check if it's time for imsak prayer"
+            },
+            {
+                "name": "check isha prayer",
+                "description": "check if it's time for isha prayer"
+            },
+            {
+                "name": "check lastthird prayer",
+                "description": "check if it's time for lastthird prayer"
+            },
+            {
+                "name": "check maghrib prayer",
+                "description": "check if it's time for maghrib prayer"
+            },
+            {
+                "name": "check midnight prayer",
+                "description": "check if it's time for midnight prayer"
+            },
+            {
+                "name": "check sunrise prayer",
+                "description": "check if it's time for sunrise prayer"
+            },
+            {
+                "name": "check sunset prayer",
+                "description": "check if it's time for sunset prayer"
+            }
+        ],
+        "reactions": []
+    }
+]

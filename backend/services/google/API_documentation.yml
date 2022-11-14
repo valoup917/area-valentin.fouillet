@@ -1,0 +1,1003 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our google services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /google
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /getUserMessages:
+    get:
+      summary: Get branches
+      tags:
+        - /google/gmail
+      description: Check if the user received a mail
+      operationId: getUserMessages
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gmailusermessages'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /getUserDrafts:
+    get:
+      summary: Get branches
+      tags:
+        - /google/gmail
+      description: Check if the user has drafts
+      operationId: getUserDrafts
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gmailuserdrafts'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /getUserLabels:
+    get:
+      summary: Get Labels
+      tags:
+        - /google/gmail
+      description: Check if the user has labels
+      operationId: getUserLabels
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gmailuserlabels'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /getUserLanguage:
+    get:
+      summary: Get Labels
+      tags:
+        - /google/gmail
+      description: Get the user language
+      operationId: getUserLanguage
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: displayLanguage
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /updateUserLanguage:
+    post:
+      summary: Change language
+      tags:
+        - /google/gmail
+      description: Change the language of a user
+      operationId: updateUserLanguage
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: language
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: displayLanguage
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail / need language
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /getUserFilters:
+    get:
+      summary: Check filters
+      tags:
+        - /google/gmail
+      description: Check if the user has a new filter
+      operationId: getUserFilters
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gmailuserfilters'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /getUserSendAs:
+    get:
+      summary: Check user wrinting
+      tags:
+        - /google/gmail
+      description: Get a user who is wrinting a mail
+      operationId: getUserSendAs
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gmailusersendas'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /trashMessage:
+    post:
+      summary: Move mail to trash
+      tags:
+        - /google/gmail
+      description: Move the given mail to trash
+      operationId: trashMessage
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: message
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/gmailusertrash'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail/ need message
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /sendMail:
+    post:
+      summary: Send a mail
+      tags:
+        - /google/gmail
+      description: Send a mail with a custom content to a choosen user
+      operationId: sendMail
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: refresh_token
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: fromEmail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: toEmail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: text
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Mail sent successfully
+
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need refresh_token/ need fromEmail / need toEmail / need text
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+#------------------------ CALENDAR ------------------------#
+
+  /getUserEvents:
+    get:
+      summary: Get new events
+      tags:
+        - /google/calendar
+      description: Check if the user has a new event in calendar
+      operationId: getUserEvents
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/calendaruserenvent'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /createEvent:
+    post:
+      summary: Create new event
+      tags:
+        - /google/calendar
+      description: This route is used to create a new event on calendar
+      operationId: createEvent
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: text
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/calendaruserenvent'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail / need text
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /deleteEvent:
+    delete:
+      summary: Delete event
+      tags:
+        - /google/calendar
+      description: This route is used to delete an existing event on calendar
+      operationId: deleteEvent
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: usermail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: eventname
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/empty'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need usermail / need eventname
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /listFiles:
+    get:
+      summary: Get files
+      tags:
+        - /google/drive
+      description: This route is used to check if there are new or update files on google drive
+      operationId: listFiles
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/drivelistfiles'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /createFile:
+    post:
+      summary: Create file
+      tags:
+        - /google/drive
+      description: This route is used to create a new files on google drive
+      operationId: createFile
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: fileName
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/drivecreatefile'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need fileName
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /deleteFile:
+    delete:
+      summary: Delete file
+      tags:
+        - /google/drive
+      description: This route is used to delete a files on google drive
+      operationId: deleteFile
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: fileName
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/empty'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need fileName
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /listComment:
+    get:
+      summary: List Comments
+      tags:
+        - /google/drive
+      description: This route is used to list the new or modified comments on a google drive file
+      operationId: listComment
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: fileName
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/drivelistcomment'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need fileName
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /createComment:
+    post:
+      summary: Create Comments
+      tags:
+        - /google/drive
+      description: This route is used to create a new comment on a google drive file
+      operationId: createComment
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: fileName
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: content
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/drivecreatecomment'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need fileName / need content
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /deleteComment:
+    delete:
+      summary: Delete Comments
+      tags:
+        - /google/drive
+      description: This route is used to delete an existing comment on a google drive file
+      operationId: deleteComment
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: fileName
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: content
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/empty'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need fileName / need content
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+#------------------------ YOUTUBE ------------------------#
+
+  /listLikedVideos:
+    get:
+      summary: Get liked videos
+      tags:
+        - /google/youtube
+      description: This route is used to get the new liked video on youtube
+      operationId: listLikedVideos
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/youtubelikedvideo'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /listDislikedVideos:
+    get:
+      summary: Get liked videos
+      tags:
+        - /google/youtube
+      description: This route is used to get the new disliked video on youtube
+      operationId: listDislikedVideos
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/youtubelikedvideo'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+components:
+  schemas:
+    youtubelikedvideo:
+      type: object
+      properties:
+        kind:
+          type: string
+        etag:
+          type: string
+        nextPageToken:
+          type: string
+        prevPageToken:
+          type: string
+        pageInfo:
+          type: object
+        items:
+          type: object
+  
+    drivecreatecomment:
+      type: object
+      properties:
+        kind:
+          type: string
+        id:
+          type: string
+        createdTime:
+          type: string
+        modifiedTime:
+          type: string
+        author:
+          type: object
+    drivelistcomment:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        comments:
+          type: object
+    drivelistfiles:
+      type: object
+      properties:
+        kind:
+          type: string
+        nextPageToken:
+          type: string
+        incompleteSearch:
+          type: boolean
+        files:
+          type: object
+    drivecreatefile:
+      type: object
+      properties:
+        kind:
+          type: string
+        id:
+          type: string
+        name:
+          type: string
+        mimeType:
+          type: string
+        description:
+          type: string
+        starred:
+          type: boolean
+        trashed:
+          type: boolean
+        explicitlyTrashed:
+          type: boolean
+        trashingUser:
+          type: object
+  
+    calendaruserenvent:
+      type: object
+      properties:
+        kind:
+          type: string
+        etag:
+          type: string
+        summary:
+          type: string
+        description:
+          type: string
+        updated:
+          type: string
+        timeZone:
+          type: string
+        accessRole:
+          type: string
+        defaultReminders:
+          type: object
+
+    empty:
+      type: object  
+  
+    gmailusermessages:
+      type: object
+      properties:
+        thread:
+          type: object
+        nextPageToken:
+          type: string
+        resultSizeEstimate:
+          type: number
+    gmailuserdrafts:
+      type: object
+      properties:
+        drafts:
+          type: object
+        nextPageToken:
+          type: string
+        resultSizeEstimate:
+          type: number
+    gmailuserlabels:
+      type: object
+      properties:
+        labels:
+          type: object
+    gmailuserfilters:
+      type: object
+      properties:
+        filter:
+          type: object
+    gmailusersendas:
+      type: object
+      properties:
+        sendAs:
+          type: object
+    gmailusertrash:
+      type: object
+      properties:
+        id:
+          type: string
+        snippet:
+          type: string
+        historyId:
+          type: string
+        messages:
+          type: object

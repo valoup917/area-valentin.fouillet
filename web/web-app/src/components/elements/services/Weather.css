@@ -1,0 +1,624 @@
+.backwth {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(29, 113, 242), rgb(255, 255, 255) 100%);
+}
+
+.wth {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 15%;
+}
+
+.button {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+    left: 15%;
+}
+
+.namewth {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: -40px;
+}
+
+.descriwth {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 0px;
+    margin-right: 100px;
+    padding: 35px;
+}
+
+.gobackwth {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(29, 113, 242);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobackwth:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.wthact1 {
+    position: relative;
+    top: 110px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction1 {
+    position: relative;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact2 {
+    position: relative;
+    top: 110px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact3 {
+    position: relative;
+    top: 110px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.cgkrea3 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.cgkrea3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact4 {
+    position: relative;
+    top: 110px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background:rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact5 {
+    position: relative;
+    top: 170px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact6 {
+    position: relative;
+    top: 170px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact7 {
+    position: relative;
+    top: 170px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact8 {
+    position: relative;
+    top: 170px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction8 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact8:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact9 {
+    position: relative;
+    top: 230px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction9 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact9:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact10 {
+    position: relative;
+    top: 230px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction10 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact10:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact11 {
+    position: relative;
+    top: 230px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction11 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact11:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact12 {
+    position: relative;
+    top: 230px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background:rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction12 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact12:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact13 {
+    position: relative;
+    top: 290px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background:rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction13 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact13:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact14 {
+    position: relative;
+    top: 290px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction14 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact14:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact15 {
+    position: relative;
+    top: 290px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction15 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact15:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact16 {
+    position: relative;
+    top: 290px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgb(29, 113, 242);
+    border-radius: 10px;
+}
+
+.wthaction16 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact16:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact17 {
+    position: relative;
+    top: 330px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.wthaction17 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact17:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact18 {
+    position: relative;
+    top: 330px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(151, 197, 66);
+    border-radius: 10px;
+}
+
+.wthaction18 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact18:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact19 {
+    position: relative;
+    top: 330px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(151, 197, 66);
+    border-radius: 10px;
+}
+
+.wthaction19 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact19:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact20 {
+    position: relative;
+    top: 330px;
+    left: 10%;
+    width: 200px;
+    height: 200px;
+    background: rgb(151, 197, 66);
+    border-radius: 10px;
+}
+
+.wthaction20 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact20:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact21 {
+    position: relative;
+    top: 390px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(151, 197, 66);
+    border-radius: 10px;
+}
+
+.wthaction21 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact21:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.wthact22 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.wthaction22 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.wthact22:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

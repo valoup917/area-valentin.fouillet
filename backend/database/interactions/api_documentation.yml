@@ -1,0 +1,1078 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Database_Interaction/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API Interact with the database in the AREA project
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /db
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /newlogin:
+    post:
+      summary: Add a new user in database
+      description: This route is used to add a new user in the database when he register
+      tags:
+        - /db/ManipulateLogin
+      operationId: newlogin
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User added successfully
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need password/need mail
+        '405':
+          description: METHOD NOT ALLOWED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User already exists
+
+  /switchedLogin:
+    post:
+      summary: Switch login state
+      description: This route is used to change the loggin state of a user, 200 if logged in 400 otherwise
+      tags:
+        - /db/ManipulateLogin
+      operationId: switchedLogin
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: state
+          in: header
+          required: true
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: State changed successfully
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail/need state
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /islogged:
+    get:
+      summary: Check if user is logged
+      description: This route is used to check if the user is logged, 200 if he is 400 otherwise
+      tags:
+        - /db/ManipulateLogin
+      operationId: islogged
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User is logged in
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User is not logged in
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist / No mail given
+
+  /checkuserexist:
+    get:
+      summary: Check if user exist
+      description: This route is used to check if a user already exist in the database, 200 if he is 404 otherwise
+      tags:
+        - /db/ManipulateLogin
+      operationId: checkuserexist
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User exist
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No mail given
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /getuserbyemail:
+    get:
+      summary: Get user information by mail
+      description: This route is used to get the user information with their mail
+      tags:
+        - /db/ManipulateLogin
+      operationId: getuserbyemail
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: user_id= user_id mail= mail password= password
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No mail given
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /checkaccess:
+    get:
+      summary: Check login parameters
+      description: This route is used to check if user exist and have the right password to connect
+      tags:
+        - /db/ManipulateLogin
+      operationId: checkaccess
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: password
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Correct access
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail/need password /Incorect password
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /deletebymail:
+    delete:
+      summary: Delete user
+      description: This route is used to delete a user using his mail to identify him
+      tags:
+        - /db/ManipulateLogin
+      operationId: deletebymail
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '205':
+          description: RESET CONTENT
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User deleted successfully
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No mail given
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /gettable:
+    get:
+      summary: Get table
+      description: This route is used to get the integrity of the login table
+      tags:
+        - /db/ManipulateLogin
+      operationId: gettable
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getlogintable'
+
+  /registerwithcredentials:
+    post:
+      summary: Register with credential
+      description: This route is used register a user with a specific credential (oauth2) like google, discord etc
+      tags:
+        - /db/ManipulateLogin
+      operationId: registerwithcredentials
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '201':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User added successfully
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail / need service / access_token
+        '405':
+          description: METHOD NOT ALLOWED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User already exist
+
+  /loginwithcredentials:
+    post:
+      summary: Login with credential
+      description: This route is used login a user with a specific credential (oauth2) like google, discord etc
+      tags:
+        - /db/ManipulateLogin
+      operationId: loginwithcredentials
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Login successfully
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail / need service / access_token
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /disconectuser:
+    post:
+      summary: Disconect a user
+      description: This route is used disconect a user, set the logged_in state in our database to false
+      tags:
+        - /db/ManipulateLogin
+      operationId: disconectuser
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User disconected
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found
+
+  /getloginstate:
+    get:
+      summary: Check state of user
+      description: This route is used to check if a user is logged or not
+      tags:
+        - /db/ManipulateLogin
+      operationId: getloginstate
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Logged in
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail / not logged in
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exists
+
+  /isausersloggedin:
+    get:
+      summary: Check state of user
+      description: This route is used to check if a user is logged or not
+      tags:
+        - /db/ManipulateLogin
+      operationId: isausersloggedin
+      responses:
+        '200':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User logged in
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No user logged in
+
+  /newcredentials:
+    post:
+      summary: New credentials
+      description: This route is used add new credentials for a user, like discord, google, twitter... You need at least a bearer or a token
+      tags:
+        - /db/ManipulateCredentials
+      operationId: newcredentials
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: is_logged
+          in: header
+          required: true
+          schema:
+            type: boolean
+        - name: access_token
+          in: header
+          required: false
+          schema:
+            type: string
+        - name: refresh_token
+          in: header
+          required: false
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail / need service / need is_logged / need bearer / need token / need at least a bearer or a token
+        '201':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User does not exist
+
+  /getcredentialsfrommail:
+    get:
+      summary: Get credentials of a user
+      description: This route is used to get all the credentials of a user
+      tags:
+        - /db/ManipulateCredentials
+      operationId: getcredentialsfrommail
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No mail given
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getcredentialsfrommail'
+
+  /getcredtable:
+    get:
+      summary: Get table
+      description: This route is used to get the integrity of the credentials table
+      tags:
+        - /db/ManipulateCredentials
+      operationId: getcredtable
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getcredtable'
+
+  /deletecredbymail:
+    delete:
+      summary: Delete credentials
+      description: This route is used to delete a credentials by using the mail adress of a user and the service to delete
+      tags:
+        - /db/ManipulateCredentials
+      operationId: deletecredbymail
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '205':
+          description: RESET CONTENT
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Deleted successfully
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No mail given / service given
+
+  /checkserviceloggedin:
+    get:
+      summary: Get table
+      description: This route is used to check if the user is logged in the service given in paramater
+      tags:
+        - /db/ManipulateCredentials
+      operationId: checkserviceloggedin
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User logged in on this service
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found
+        '401':
+          description: UNAUTHORIZED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not logged in on this service
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No mail given / service given / User not logged in on this service / No service exist for this user
+
+  /setaccesstoken:
+    post:
+      summary: Set access token
+      description: This route is used to set the access token of a user in our database
+      tags:
+        - /db/ManipulateCredentials
+      operationId: setaccesstoken
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Accesss token set successfully
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found / service not found
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail / need service / need access_token
+
+  /setrefreshtoken:
+    post:
+      summary: Set refresh token
+      description: This route is used to set the refresh token of a user in our database
+      tags:
+        - /db/ManipulateCredentials
+      operationId: setrefreshtoken
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: refresh_token
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Accesss token set successfully
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found / service not found
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail / need service / need refresh_token
+
+  /setaccessandrefreshtoken:
+    post:
+      summary: Set access and refresh token
+      description: This route is used to set the access and refresh token of a user in our database
+      tags:
+        - /db/ManipulateCredentials
+      operationId: setaccessandrefreshtoken
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: access_token
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: refresh_token
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Accesss token set successfully
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found / service not found
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail / need service / need access_token
+
+  /disconectservice:
+    get:
+      summary: Disconect user from service
+      description: This route is used disconect a user from a service, like google, discord...
+      tags:
+        - /db/ManipulateCredentials
+      operationId: disconectservice
+      parameters:
+        - name: mail
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: service
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "User disconected on this service : service"
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given need mail / need service
+
+  /newarea:
+    post:
+      summary: Add a new user in database
+      description: This route is used to add a new user in the database when he register
+      tags:
+        - /db/ManipulateAreas
+      operationId: newarea
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: action
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: reaction
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: action_data
+          in: header
+          required: false
+          schema:
+            type: string
+        - name: reaction_data
+          in: header
+          required: false
+          schema:
+            type: string
+      responses:
+        '201':
+          description: CREATED
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Area created
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail/ need action/ need reaction
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found
+
+  /getareasfrommail:
+    get:
+      summary: Get areas of a user
+      description: This route is used get all the areas of a user
+      tags:
+        - /db/ManipulateAreas
+      operationId: getareasfrommail
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getareasfrommail'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail / No areas
+
+  /deletespecificarea:
+    delete:
+      summary: Delete a specific area
+      description: This route is used to delete a specific area of a user
+      tags:
+        - /db/ManipulateAreas
+      operationId: deletespecificarea
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: action
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: reaction
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '205':
+          description: RESET CONTENT
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Area deleted
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail / need action / need reaction
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found / Area not found
+
+  /deleteallareasfrommail:
+    delete:
+      summary: Delete all areas of user
+      description: This route is to delete all the areas of a user
+      tags:
+        - /db/ManipulateAreas
+      operationId: deleteallareasfrommail
+      parameters:
+        - name: mail
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '205':
+          description: RESET CONTENT
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Area deleted
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need mail
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: User not found
+
+components:
+  schemas:
+    getlogintable:
+      type: object
+      properties:
+        uuid:
+          type: string
+        mail:
+          type: string
+        password:
+          type: string
+        logged_in:
+          type: boolean
+
+    getcredentialsfrommail:
+      type: object
+      properties:
+        uuid:
+          type: string
+        service:
+          type: string
+        is_logged:
+          type: boolean
+        bearer:
+          type: string
+        token:
+          type: string
+
+    getcredtable:
+      type: object
+      properties:
+        uuid:
+          type: string
+        service:
+          type: string
+        is_logged:
+          type: boolean
+        bearer:
+          type: string
+        token:
+          type: string
+
+    getareasfrommail:
+      type: object
+      properties:
+        action:
+          type: string
+        action_done:
+          type: boolean
+        reaction:
+          type: string
+        reaction_done:
+          type: boolean

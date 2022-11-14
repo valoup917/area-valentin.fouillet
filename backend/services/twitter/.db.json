@@ -1,0 +1,10 @@
+{
+    "token_type": "bearer",
+    "expires_in": 7200,
+    "access_token": "b1ZtZ1R5YUJXV20wRk54ZFhFVHN6UGFodERwcVhPQy1yY29VRDVKYVdhZElpOjE2Njc0Nzk2NzM3Mzc6MTowOmF0OjE",
+    "scope": "follows.read offline.access bookmark.read tweet.write like.write like.read users.read tweet.read bookmark.write follows.write",
+    "refresh_token": "Q2FJYjhEd1ZWeUY4ZGsyZ3JONkQtRVZXWndsSUlJeFVPMno5MWJ5MzR5aEVyOjE2Njc0Nzk2NzM3Mzc6MTowOnJ0OjE",
+    "id": "1574389757949448194",
+    "name": "DevDev Antwenee",
+    "username": "devantweneee"
+}

@@ -1,0 +1,315 @@
+.backi {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(27, 95, 104), rgb(255, 255, 255) 100%);
+}
+
+.ipsfesse {
+    position: relative;
+    display: block;
+    margin: auto;
+    top: -10px;
+    width: 40%;
+    left: -40%;
+}
+
+.Reactions1 {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 450px;
+}
+
+.Connectelse1 {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top:800px;
+}
+
+.descrip2 {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 0px;
+    padding: 35px;
+    left: -15%;
+}
+
+.nameipfsss {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 30px;
+    left: -40%;
+}
+
+.buttonco {
+    position: relative;
+    width: 130px;
+    left: 0px;
+    top: -65px;
+    font-size: 24px;
+    border-radius: 20%;
+    border: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    font: bold large;
+}
+
+.returnbut {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    left: -850px;
+    top: -500px;
+    font-size: 24px;
+    border-radius: 20%;
+    border: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    font: bold large;
+}
+
+.ipfsract1 {
+    position: relative;
+    top: 130px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract2 {
+    position: relative;
+    top: 110px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract3 {
+    position: relative;
+    top: 110px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract4 {
+    position: relative;
+    top: 150px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract5 {
+    position: relative;
+    top: 150px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract6 {
+    position: relative;
+    top: 170px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract7 {
+    position: relative;
+    top: 210px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract8 {
+    position: relative;
+    top: 210px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction8 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract8:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsract9 {
+    position: relative;
+    top: 210px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction9 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract9:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ipfsrrea10 {
+    position: relative;
+    top: 270px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(27, 95, 104);
+    border-radius: 10px;
+}
+
+.rreaction10 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ipfsract10:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

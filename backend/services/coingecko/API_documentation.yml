@@ -1,0 +1,913 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Coingecko API
+  description: The API Interact with the Coingecko service in the AREA project
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      operationId: ping
+      tags:
+        - /coingecko
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: OK
+
+  /coinprice:
+    get:
+      summary: Get price of a coin
+      tags:
+        - coingecko
+      description: This route is used to check the price of a given price
+      operationId: coinprice
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: name of your coin
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /existingcoin:
+    get:
+      summary: Check if coin exist
+      tags:
+        - coingecko
+      description: check if the coin given in parameters exist
+      operationId: existingcoin
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: This coin does exist
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: This coin does not exist
+
+  /checkcoinprice:
+    get:
+      summary: Check the price of a coin
+      tags:
+        - coingecko
+      description: Check the price of the coin given in parameters
+      operationId: checkcoinprice
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: price
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price not accurate
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /changeonehour:
+    get:
+      summary: Check the changement in one hour
+      tags:
+        - coingecko
+      description: Check the changement of a coin given in parameters in one hour
+      operationId: changeonehour
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Your coin change is: ${data}"
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /checkchangeonehourpercentage:
+    get:
+      summary: Guess the changement in one hour
+      tags:
+        - coingecko
+      description: Check the changement of a coin given in parameters in one hour and compare it with your guess also given in parameters
+      operationId: checkchangeonehourpercentage
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Correct; current change is: change"
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Incorrect
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /changeoneday:
+    get:
+      summary: Check the changement in one day
+      tags:
+        - coingecko
+      description: Check the changement of a coin given in parameters in one day
+      operationId: changeoneday
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Your coin change is: ${data}"
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /checkchangeonedaypercentage:
+    get:
+      summary: Guess the changement in one day
+      tags:
+        - coingecko
+      description: Check the changement of a coin given in parameters in one day and compare it with your guess also given in parameters
+      operationId: checkchangeonedaypercentage
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Correct; current change is: change"
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Incorrect
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /changeoneweek:
+    get:
+      summary: Check the changement in one week
+      tags:
+        - coingecko
+      description: Check the changement of a coin given in parameters in one day and compare it with your guess also given in parameters
+      operationId: changeoneweek
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Your coin change is: ${data}"
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /checkchangeoneweekpercentage:
+    get:
+      summary: Guess the changement in one week
+      tags:
+        - coingecko
+      description: Check the changement of a coin given in parameters in one week and compare it with your guess also given in parameters
+      operationId: checkchangeweekdaypercentage
+      parameters:
+        - name: coin
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: "Correct; current change is: change"
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Incorrect
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Not found
+
+  /btccheckcoinprice:
+    get:
+      summary: Compare bitcoin price
+      tags:
+        - coingecko
+      description: Check the changement of the bitcoin and the price given in parameter
+      operationId: btccheckcoinprice
+      parameters:
+        - name: price
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need price / Price not accurate
+
+  /btccheckonehour:
+    get:
+      summary: Compare bitcoin price
+      tags:
+        - coingecko
+      description: Check the changement in one hour of the bitcoin and the percentage given in parameter
+      operationId: btccheckonehour
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Price not accurate
+
+  /btccheckoneday:
+    get:
+      summary: Compare bitcoin price
+      tags:
+        - coingecko
+      description: Check the changement in one day of the bitcoin and the percentage given in parameter
+      operationId: btccheckoneday
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /btccheckoneweek:
+    get:
+      summary: Compare bitcoin price
+      tags:
+        - coingecko
+      description: Check the changement in one week of the bitcoin and the percentage given in parameter
+      operationId: btccheckoneweek
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /ethcheckcoinprice:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement of the ethereum and the price given in parameter
+      operationId: ethcheckcoinprice
+      parameters:
+        - name: price
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need price / Price not accurate
+
+  /ethcheckonehour:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one hour of the ethereum and the percentage given in parameter
+      operationId: ethcheckonehour
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Price not accurate
+
+  /ethcheckoneday:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one day of the ethereum and the percentage given in parameter
+      operationId: ethcheckoneday
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /ethcheckoneweek:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one week of the ethereum and the percentage given in parameter
+      operationId: ethcheckoneweek
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /bnbcheckcoinprice:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement of the bnb and the price given in parameter
+      operationId: bnbcheckcoinprice
+      parameters:
+        - name: price
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need price / Price not accurate
+
+  /bnbcheckonehour:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one hour of the bnb and the percentage given in parameter
+      operationId: bnbcheckonehour
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Price not accurate
+
+  /bnbcheckoneday:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one day of the bnb and the percentage given in parameter
+      operationId: bnbcheckoneday
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /bnbcheckoneweek:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one week of the bnb and the percentage given in parameter
+      operationId: bnbcheckoneweek
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /binanceusdcheckcoinprice:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement of the binance usd and the price given in parameter
+      operationId: binanceusdcheckcoinprice
+      parameters:
+        - name: price
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need price / Price not accurate
+
+  /binanceusdcheckonehour:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one hour of the binance usd and the percentage given in parameter
+      operationId: binanceusdcheckonehour
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Price not accurate
+
+  /binanceusdcheckoneday:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one day of the binance usd and the percentage given in parameter
+      operationId: binanceusdcheckoneday
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /binanceusdcheckoneweek:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one week of the binance usd and the percentage given in parameter
+      operationId: binanceusdcheckoneweek
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /solanacheckcoinprice:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement of the solana and the price given in parameter
+      operationId: solanacheckcoinprice
+      parameters:
+        - name: price
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need price / Price not accurate
+
+  /solanacheckonehour:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one hour of the solana and the percentage given in parameter
+      operationId: solanacheckonehour
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Price accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Price not accurate
+
+  /solanacheckoneday:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one day of the solana and the percentage given in parameter
+      operationId: solanacheckoneday
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate
+
+  /solanacheckoneweek:
+    get:
+      summary: Compare ethereum price
+      tags:
+        - coingecko
+      description: Check the changement in one week of the solana and the percentage given in parameter
+      operationId: solanacheckoneweek
+      parameters:
+        - name: percentage
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Current change accurate
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need percentage / Current change not accurate

@@ -1,0 +1,266 @@
+.back {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(255, 0, 0), rgb(255, 255, 255) 100%);
+}
+
+.ytbbb {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 10%;
+    left: -15%;
+}
+
+.button {
+    position: relative;
+    top: 0px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.nameyt {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: -20px;
+    left: -15%;
+}
+
+.descripyt {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: -30px;
+    margin-right: 100px;
+    padding: 35px;
+    left: -15%;
+}
+
+.gobackyt {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(240, 83, 83);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.goback:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.ytact1 {
+    position: relative;
+    top: 130px;
+    left: -3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.ytaction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytact2 {
+    position: relative;
+    top: 130px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.ytaction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytact3 {
+    position: relative;
+    top: 120px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.reytaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytrea3 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.ytaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.rea3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytact4 {
+    position: relative;
+    top: 120px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background:rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.ytaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytact5 {
+    position: relative;
+    top: 120px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.ytaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytact6 {
+    position: relative;
+    top: 140px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(248, 74, 74);
+    border-radius: 10px;
+}
+
+.ytaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.ytact7 {
+    position: relative;
+    top: 169px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.ytaction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.ytact7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

@@ -1,0 +1,233 @@
+version: "3.3"
+services:
+  gateway:
+    build: ./backend/gateway/
+    ports:
+      - "8080:8080"
+    networks:
+      - gateway-tier
+    depends_on:
+      - db
+
+
+  # mobile_client:
+  #   build: ./mobile/
+  #   ports:
+  #     - "8083:8083"
+  #   tty: true
+  #   networks:
+  #     - mobile-tier
+  #     - gateway-tier
+  #   volumes:
+  #     - commonvolumes:/volumes
+
+  web_client:
+    build: ./web/web-app/
+    depends_on:
+      - gateway
+      #- mobile_client
+    ports:
+      - "8081:8081"
+    networks:
+      - web_client-tier
+      - gateway-tier
+    volumes:
+      - commonvolumes:/volumes
+
+  auth:
+    build: ./backend/services/auth/
+    ports:
+      - "8090:8090"
+    networks:
+      - auth-tier
+      - gateway-tier
+
+  weather:
+    build: ./backend/services/weather
+    ports:
+      - "8095:8095"
+    networks:
+      - weather-tier
+      - gateway-tier
+
+  twitter:
+    build: ./backend/services/twitter
+    ports:
+      - "9005:9005"
+    networks:
+      - twitter-tier
+      - gateway-tier
+
+  discord:
+    build: ./backend/services/discord
+    ports:
+      - "9010:9010"
+    networks:
+      - discord-tier
+      - gateway-tier
+
+  db:
+    build: ./backend/database/interactions/
+    ports:
+      - "9020:9020"
+    networks:
+      - db-tier
+      - gateway-tier
+
+  trigger:
+    build: ./backend/trigger/
+    restart: always
+    networks:
+      - db-tier
+      - gateway-tier
+      - ipfs-tier
+      - ipfs-image-tier
+      - coingecko-tier
+      - spotify-tier
+      - github-tier
+      - twitch-tier
+      - google-tier
+      - discord-tier
+      - twitter-tier
+      - weather-tier
+      - auth-tier
+      - web_client-tier
+      - storage-tier
+      - linkedin-tier
+      - riotgame-tier
+      - salat-tier
+
+  ipfs:
+    build: ./backend/services/ipfs
+    ports:
+      - "9030:9030"
+    networks:
+    - ipfs-tier
+    - gateway-tier
+
+  ipfs-image:
+    image: ipfs/go-ipfs
+    ports:
+      - "9035:5001"
+    networks:
+      - ipfs-image-tier
+      - gateway-tier
+    volumes:
+      - commonvolumes:/volumes
+
+  coingecko:
+    build: ./backend/services/coingecko
+    ports:
+      - "9040:9040"
+    networks:
+      - coingecko-tier
+      - gateway-tier
+
+  spotify:
+    build: ./backend/services/spotify
+    ports:
+      - "9125:9125"
+    networks:
+      - spotify-tier
+      - gateway-tier
+
+  twitch:
+    build: ./backend/services/twitch
+    ports:
+      - "9135:9135"
+    networks:
+      - twitch-tier
+      - gateway-tier
+
+  google:
+    build: ./backend/services/google
+    ports:
+      - "9115:9115"
+    networks:
+      - google-tier
+      - gateway-tier
+
+  github:
+    build: ./backend/services/github/
+    ports:
+      - "9065:9065"
+    networks:
+      - github-tier
+      - gateway-tier
+
+  storage:
+    build: ./backend/services/storage
+    ports:
+      - "9145:9145"
+    networks:
+      - storage-tier
+      - gateway-tier
+
+  riotgame:
+    build: ./backend/services/riotgame
+    ports:
+      - "9140:9140"
+    networks:
+      - riotgame-tier
+      - gateway-tier
+
+  salat:
+    build: ./backend/services/salat
+    ports:
+      - "9455:9455"
+    networks:
+      - salat-tier
+      - gateway-tier
+
+  linkedin:
+    build: ./backend/services/linkedin
+    ports:
+      - "9075:9075"
+    networks:
+      - linkedin-tier
+      - gateway-tier
+
+volumes:
+  commonvolumes:
+
+networks:
+  gateway-tier:
+    driver: bridge
+  web_client-tier:
+    driver: bridge
+  auth-tier:
+    driver: bridge
+  weather-tier:
+    driver: bridge
+  twitter-tier:
+    driver: bridge
+  discord-tier:
+    driver: bridge
+  db-tier:
+    driver: bridge
+  trigger-tier:
+    driver: bridge
+  ipfs-tier:
+    driver: bridge
+  ipfs-image-tier:
+    driver: bridge
+  coingecko-tier:
+    driver: bridge
+  twitch-tier:
+    driver: bridge
+  spotify-tier:
+    driver: bridge
+  google-tier:
+    driver: bridge
+  github-tier:
+    driver: bridge
+  #mobile-tier:
+  #  driver: bridge
+  storage-tier:
+    driver: bridge
+  riotgame-tier:
+    driver: bridge
+  salat-tier:
+    driver: bridge
+  linkedin-tier:
+    driver: bridge

@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package main;
+
+option go_package = "./proto";
+
+import "google/api/annotations.proto";
+
+service Hello {
+    rpc Auth(RequestEcho) returns (ResponseRequest) {
+        option (google.api.http) = {
+            post: "/auth",
+            body: "*"
+        };
+    }
+}
+
+message RequestEcho {
+    string hello = 1;
+}
+
+message ResponseRequest {
+    string msg = 1;
+}

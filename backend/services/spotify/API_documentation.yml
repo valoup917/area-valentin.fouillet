@@ -1,0 +1,466 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our spotify services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /spotify
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /userName:
+    get:
+      summary: get user name
+      tags:
+        - /spotify
+      description: This route is used to get the user name
+      operationId: userNamee
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userEmail:
+    get:
+      summary: get user email
+      tags:
+        - /spotify
+      description: This route is used to get the user email
+      operationId: userEmaill
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userFollowers:
+    get:
+      summary: get user followers
+      tags:
+        - /spotify
+      description: This route is used to get the user followers
+      operationId: userFollowerss
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userProfileImage:
+    get:
+      summary: get user profile image
+      tags:
+        - /spotify
+      description: This route is used to get the user profile image
+      operationId: userProfileImage
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userProduct:
+    get:
+      summary: get user productions
+      tags:
+        - /spotify
+      description: This route is used to get the user productions
+      operationId: userProduct
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userFollowing:
+    get:
+      summary: get user followers
+      tags:
+        - /spotify
+      description: This route is used to get the user followers
+      operationId: userFollowingg
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /followPlaylist:
+    get:
+      summary: follow playlist
+      tags:
+        - /spotify
+      description: This route is used to follow a playlist
+      operationId: followPlaylist
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: playlistUrl
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need playlistUrl
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /pausePlayback:
+    get:
+      summary: pause song
+      tags:
+        - /spotify
+      description: This route is used to pause the song playing
+      operationId: pausePlayback
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization, need playlistUrl
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /resumePlayback:
+    get:
+      summary: resume song
+      tags:
+        - /spotify
+      description: This route is used to resume the song playing
+      operationId: resumePlayback
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /skipToNext:
+    get:
+      summary: go to next song
+      tags:
+        - /spotify
+      description: This route is used to go to the next song
+      operationId: skipToNext
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /skipToPrevious:
+    get:
+      summary: go to previous song
+      tags:
+        - /spotify
+      description: This route is used to go to the previous song
+      operationId: skipToPrevious
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /setPlaybackVolume:
+    get:
+      summary: go to previous song
+      tags:
+        - /spotify
+      description: This route is used to go to the previous song
+      operationId: setPlaybackVolume
+      parameters:
+        - name: authorization
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: volume
+          in: header
+          required: true
+          schema:
+            type: number
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ok
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / nned volume
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable

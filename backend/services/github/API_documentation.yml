@@ -1,0 +1,564 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Database_Interaction/1.0.0
+info:
+  version: "1.0.0"
+  title: Github Interaction
+  description: The API Interact with the Github service in the AREA project
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /github
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /userName:
+    get:
+      summary: Get changed name
+      tags:
+        - github
+      description: Check if name of the user has change
+      operationId: userName
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubusername'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userDescription:
+    get:
+      summary: Get changed description
+      tags:
+        - github
+      description: Check if description of the user has change
+      operationId: userDescription
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubuserdescription'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /updateUserName:
+    post:
+      summary: Update name
+      tags:
+        - github
+      description: Change the name of the user
+      operationId: updateUserName
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: name
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Name updated
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need name
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /updateUserEmail:
+    post:
+      summary: Update email
+      tags:
+        - github
+      description: Change the email of the user
+      operationId: updateUserEmail
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: email
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Email updated
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need email
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /updateUserDescription:
+    post:
+      summary: Update description
+      tags:
+        - github
+      description: Change the description of the user
+      operationId: updateUserDescription
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: bio
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Description updated
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need bio
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /updateEmailVisibility:
+    post:
+      summary: Update description
+      tags:
+        - github
+      description: Change the email visibility of the user
+      operationId: updateEmailVisibility
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: visibility
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Email visibility updated
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need visibility
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userFollowers:
+    get:
+      summary: Get followers
+      tags:
+        - github
+      description: Get the user followers
+      operationId: userFollowers
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubuserFollowers'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userFollowing:
+    get:
+      summary: Get following user
+      tags:
+        - github
+      description: Get the following users
+      operationId: userFollowing
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubuserFollowing'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userRepository:
+    get:
+      summary: Get user repositories
+      tags:
+        - github
+      description: Get repositories of a user
+      operationId: userRepository
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubuserrepos'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /createRepository:
+    post:
+      summary: Create a repository
+      tags:
+        - github
+      description: This route is used to create a repository in the account of the user
+      operationId: createRepository
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: repository
+          in: header
+          required: true
+          schema:
+            type: string
+        - name: description
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubuserrepos'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization / need repository / need description
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userCommits:
+    get:
+      summary: Get commits
+      tags:
+        - github
+      description: This route is used to get the commits of a user
+      operationId: userCommits
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubusercommits'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+  /userBranches:
+    get:
+      summary: Get branches
+      tags:
+        - github
+      description: This route is used to get the branch of a user
+      operationId: userBranches
+      parameters:
+        - name: access_token
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/githubuserbranches'
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Bad info given, need authorization
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Service unavailable
+
+components:
+  schemas:
+    githubusername:
+      type: object
+      properties:
+        name:
+          type: string
+    githubuserdescription:
+      type: object
+      properties:
+        bio:
+          type: string
+    githubuserFollowers:
+      type: object
+      properties:
+        login:
+          type: string
+        id:
+          type: number
+        node_id:
+          type: string
+        avatar_url:
+          type: string
+        gravatar_id:
+          type: string
+        url:
+          type: string
+    githubuserFollowing:
+      type: object
+      properties:
+        login:
+          type: string
+        id:
+          type: number
+        node_id:
+          type: string
+        avatar_url:
+          type: string
+        gravatar_id:
+          type: string
+        url:
+          type: string
+    githubuserrepos:
+      type: object
+      properties:
+        login:
+          type: string
+        id:
+          type: number
+        node_id:
+          type: string
+        name:
+          type: string
+        full_name:
+          type: string
+        owner:
+          type: object
+    githubusercommits:
+      type: object
+      properties:
+        url:
+          type: string
+        sha:
+          type: number
+        node_id:
+          type: string
+        html_url:
+          type: string
+        comments_url:
+          type: string
+        commit:
+          type: object
+    githubuserbranches:
+      type: object
+      properties:
+        name:
+          type: string
+        commit:
+          type: object
+        protected:
+          type: boolean
+        protection:
+          type: object
+        protection_url:
+          type: string

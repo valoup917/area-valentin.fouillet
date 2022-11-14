@@ -1,0 +1,268 @@
+.backspot {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(0, 0, 0), rgb(255, 255, 255) 100%);
+}
+
+.spt {
+    position: relative;
+    display: block;
+    left: 0%;
+    margin: auto;
+    width: 10%;
+    top: 10px;
+    left: -15%;
+}
+
+.button {
+    position: relative;
+    top: 0px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.namespot {
+    position: relative;
+    top: 20px;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    left: -15%;
+}
+
+.descripspt {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 20px;
+    margin-right: 100px;
+    padding: 35px;
+    left: -15%;
+}
+
+.gobackspt {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(30, 215, 96);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobackspt:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.sreact1 {
+    position: relative;
+    top: 140px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.sreaeaction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.sreact1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.sact2 {
+    position: relative;
+    top: 120px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.sreaction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.sact2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.sreact3 {
+    position: relative;
+    top: 120px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.srreaeaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.sreact3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.srea3 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 220px;
+    height: 220px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.sreaction3 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.srea3:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.resact4 {
+    position: relative;
+    top: 180px;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.sreaction4 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.resact4:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.sact5 {
+    position: relative;
+    top: 160px;
+    left: 0%;
+    width: 200px;
+    height: 200px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.sreaction5 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.sact5:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.resact6 {
+    position: relative;
+    top: 140px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(30, 215, 96);
+    border-radius: 10px;
+}
+
+.sreaction6 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.resact6:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.sact7 {
+    position: relative;
+    top: 169px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.reaction7 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.act7:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

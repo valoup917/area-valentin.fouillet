@@ -1,0 +1,46 @@
+{
+    "services": {
+        "Weather": {
+            "index": 0,
+            "instances": [
+                {
+                    "apiName": "Weather",
+                    "protocol": "http",
+                    "host": "weather",
+                    "port": 8095,
+                    "url": "http://weather:8095/",
+                    "enabled": true
+                }
+            ],
+            "loadBalancerStrategy": "ROUND_ROBIN"
+        },
+        "db": {
+            "index": 0,
+            "instances": [
+                {
+                    "apiName": "db",
+                    "protocol": "http",
+                    "host": "db",
+                    "port": 9020,
+                    "url": "http://db:9020/",
+                    "enabled": true
+                }
+            ],
+            "loadBalancerStrategy": "ROUND_ROBIN"
+        },
+        "auth": {
+            "index": 0,
+            "instances": [
+                {
+                    "apiName": "auth",
+                    "protocol": "http",
+                    "host": "auth",
+                    "port": 8090,
+                    "url": "http://auth:8090/",
+                    "enabled": true
+                }
+            ],
+            "loadBalancerStrategy": "ROUND_ROBIN"
+        }
+    }
+}

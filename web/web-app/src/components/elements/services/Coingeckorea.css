@@ -1,0 +1,96 @@
+.backcgk {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(151, 197, 66), rgb(255, 255, 255) 100%);
+}
+
+.cgk {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 20%;
+    left: -15%;
+}
+
+.buttongit {
+    position: relative;
+    width: 100%;
+    top: 10px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.namegt {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 0px;
+}
+
+.descripgt {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 0px;
+    margin-right: 100px;
+    padding: 35px;
+}
+
+.gobackcgk {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(172, 223, 78);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobackcgk:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+.cgkact22 {
+    position: relative;
+    top: 430px;
+    left: 5%;
+    width: 200px;
+    height: 200px;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.cgkaction22 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.cgkact22:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

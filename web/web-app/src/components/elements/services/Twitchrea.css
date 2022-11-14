@@ -1,0 +1,121 @@
+.backg {
+    position: relative;
+    display: inline-block;
+    display: flex;
+    height: 500px;
+    background: linear-gradient(360deg, rgb(100, 65, 165), rgb(255, 255, 255) 100%);
+}
+
+.twitwiiitch {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 10%;
+    top: 30px;
+    left: -15%;
+}
+
+.button {
+    position: relative;
+    top: 0px;
+    font: bold large;
+    left: -35px;
+}
+
+.disc {
+    position: relative;
+    top: 100px;
+}
+
+.nametwitch {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    top: 40px;
+}
+
+.descriptw {
+    position: relative;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+    font-size: 1;
+    top: 30px;
+    margin-right: 100px;
+    padding: 35px;
+}
+
+.gobacktwitch {
+    position: relative;
+    width: 80px;
+    height: 30px;
+    background:rgb(100, 65, 165);
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    top: -200px;
+    left: 55%;
+}
+
+.gobacktwitch:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.Actions {
+    color: (30,33,36);
+    left: 0%;
+    position: relative;
+    top: 70px;
+}
+
+
+.twrract1 {
+    position: relative;
+    top: 130px;
+    left: -3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(100, 65, 165);
+    border-radius: 10px;
+}
+
+.twaction1 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.twact1:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}
+
+.twrract2 {
+    position: relative;
+    top: 90px;
+    left: 3%;
+    width: 200px;
+    height: 200px;
+    background: rgb(100, 65, 165);
+    border-radius: 10px;
+}
+
+.twrraction2 {
+    position: relative;
+    display: block;
+    margin-left: auto;
+    color: rgb(255, 255, 255);
+    font: bold large serif;
+}
+
+.twrract2:hover {
+    transform: rotate(360deg);
+    transform: scale(1.04);
+    transition: all 0.2s linear;
+}

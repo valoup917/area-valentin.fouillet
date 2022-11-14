@@ -1,0 +1,97 @@
+openapi: 3.0.0
+servers:
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/ANTWENEEEDEV/Weather_API/1.0.0
+info:
+  version: "1.0.0"
+  title: Database Interaction
+  description: The API to Interact with our riotgame services
+paths:
+  /ping:
+    get:
+      summary: checker
+      description: check if the server in running
+      tags:
+        - /riotgame
+      operationId: ping
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Ok
+
+  /maintenance:
+    get:
+      summary: Check league maintenance
+      description: This route is use to check if league of legend is on maintenance
+      tags:
+        - /riotgame
+      operationId: maintenance
+      responses:
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: No update
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: service unavailable
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Update
+
+  /ischampioninrotation:
+    get:
+      summary: Check free rotation
+      description: This route is use to check if the given champion is in the free champion rotation
+      tags:
+        - /riotgame
+      operationId: ischampioninrotation
+      parameters:
+        - name: champion_name
+          in: header
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Champion in rotation
+        '400':
+          description: BAD REQUEST
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Champion not in rotation
+        '404':
+          description: NOT FOUND
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Champion not found
+        '503':
+          description: SERVICE UNAVAILABLE
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: service unavailable

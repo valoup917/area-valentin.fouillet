@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>API Gateway</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="big-title">API Gateway Services</h1>
+        <dis class="services">
+            <% Object.entries(services).forEach(service => { %>
+                <div class="info-group-top">
+                    <h3>Name:</h3>
+                    <p class="ApiName"><%= service[0] %></p>
+                </div>
+                <div class="info-group">
+                    <h3>Load Balance Strategy:</h3>
+                    <p><%= service[1].loadBalancerStrategy %></p>
+                </div>
+                <div class="instances">
+                    <h3>Registered Instances:</h3>
+                    <% service[1].instances.forEach((instance, index) => { %>
+                        <div class="index">
+                            <label for="index">INDEX: [<span><%= index + 1 %></span>]</label>
+                        </div>
+                        <div class="instance-group">
+                            <label for="url">URL: [<span><%= instance.url %></span>]</label>
+                        </div>
+                        <div class="instance-group">
+                            <label for="enabled">Enabled: [<span><%= instance.enabled %></span>]</label>
+                        </div>
+                    <% }) %>
+                </div>
+            <% }) %>
+        </dis>
+    </div>
+</body>
+</html>

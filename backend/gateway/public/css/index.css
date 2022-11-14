@@ -1,0 +1,34 @@
+* {
+    font-family: Tahoma;
+}
+
+.big-title {
+    color: rgb(75, 204, 58);
+    text-align: center;
+    font-family: Tahoma;
+}
+
+h3 {
+    margin-left: 20px;
+}
+
+p, label {
+    margin-left: 50px;
+}
+
+.index {
+    margin-top: 30px;
+}
+
+span {
+    color: rgb(32, 195, 11);
+}
+
+.ApiName {
+    color:rgb(0, 121, 24);
+    font-size: large;
+}
+
+.info-group-top {
+    margin-top: 70px;
+}
