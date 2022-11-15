@@ -24,7 +24,7 @@ export default function LoginForm({ Login, error, props }) {
     }).then (async function () {
       await timeout(15000);
       await axios.get(
-        'http://localhost:9145/storage/getmail'
+        'http://localhost:8080/storage/getmail'
       ).then (function (response) {
         console.log(response)
         tmpmail = response.data
@@ -59,6 +59,24 @@ export default function LoginForm({ Login, error, props }) {
     if (status !== 200) {
       return alert("Wrong credentials, please try again");
     }
+    await axios({
+      method: 'POST',
+      url: 'http://localhost:8080/storage/store',
+      data: {
+        mail: global.mail,
+      }
+    }).then(response => {
+      console.log(response.status);
+    })
+    await axios.get(
+      'http://localhost:8080/storage/getmail',
+    ).then (function (response) {
+      console.log(response)
+      var tmpmail = response.data
+      console.log(tmpmail);
+    }).catch (function (err) {
+      console.log(err)
+    })
     setCookie('email', global.mail);
     console.log(cookies.email);
     await timeout(1000);

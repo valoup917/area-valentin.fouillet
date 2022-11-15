@@ -39,6 +39,24 @@ export default function Register({ Login, error, props }) {
     } else if (status === 405) {
       return alert("This user already exists please, try with new credentials");
     }
+    await axios({
+      method: 'POST',
+      url: 'http://localhost:8080/storage/store',
+      data: {
+        mail: value1,
+      }
+    }).then(response => {
+      console.log(response.status);
+    })
+    await axios.get(
+      'http://localhost:8080/storage/getmail',
+    ).then (function (response) {
+      console.log(response)
+      var tmpmail = response.data
+      console.log(tmpmail);
+    }).catch (function (err) {
+      console.log(err)
+    })
     setCookie('email', value1);
     console.log(cookies.email);
     await timeout(500);
