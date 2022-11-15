@@ -177,7 +177,7 @@ methods = {
     "http://twitter:9005/twitter/createTweet" : ["post", [0]],
     #! linkedin routes
     "http://linkedin:9075/linkedin/userEmail" : ["get", []],
-    "http://linkedin:9075/linkedin/createpost" : ["get", [0]],
+    "http://linkedin:9075/linkedin/createpost" : ["post", [0]],
     #! riotgame routes
     "http://riotgame:9140/riotgame/maintenance" : ["get", []],
     "http://riotgame:9140/riotgame/ischampioninrotation" : ["get", [0]],
