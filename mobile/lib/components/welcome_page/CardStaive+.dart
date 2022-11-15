@@ -17,7 +17,7 @@ class CardStaivePlus extends StatelessWidget {
 
   final String email;
   final String text;
-  final double price;
+  final int price;
   final List arguments;
   final Color shadowColor;
   final Color textColor;
@@ -116,7 +116,7 @@ class CardStaivePlus extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(bottom: 12.0),
               child: ElevatedButton(
-                onPressed: () => paymentController.makePayment(amount: "price", currency: 'USD'),
+                onPressed: () => paymentController.makePayment(amount: price.toString(), currency: 'USD'),
                 style: ElevatedButton.styleFrom(
                   fixedSize: const Size(150, 50),
                   textStyle: const TextStyle(

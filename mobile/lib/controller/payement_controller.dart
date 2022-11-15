@@ -18,6 +18,7 @@ class PaymentController extends GetxController {
             customerId: paymentIntentData!['customer'],
             paymentIntentClientSecret: paymentIntentData!['client_secret'],
             customerEphemeralKeySecret: paymentIntentData!['ephemeralKey'],
+            applePay: PaymentSheetApplePay(merchantCountryCode: ),
         ));
         displayPaymentSheet();
       }

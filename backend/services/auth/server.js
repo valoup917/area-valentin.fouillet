@@ -73,8 +73,12 @@ const services_dict = {
 
 'use strict';
 app.get("/auth/isLoggedWith", async (req, res) => {
-    const Service = req.query.service
+    var Service = req.query.service
     const Email = req.query.email
+
+    if (Service == "calendar" || Service == "youtube" || Service == "drive" || Service == "gmail") {
+        Service = "google";
+    } 
 
     console.log("is `" + Email + "` logged with `" + Service + "`")
 

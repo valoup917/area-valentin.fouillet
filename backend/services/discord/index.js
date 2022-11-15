@@ -36,8 +36,6 @@ async function get_user_info(access_token) {
                 'Authorization': `Bearer ${access_token}`,
             }
         })
-    console.log("resp = ");
-    console.log(resp);
     return resp.data;
 }
 
@@ -135,7 +133,6 @@ app.get("/Discord/sendrandommeme", async (req, res) => {
     } else {
         const randomIndex = randomInt(0, subReddits.length);
         const user_info = await get_user_info(req.headers.authorization)
-        /*
         const user_acceptability = await check_user_acceptability(req.headers.authorization);
 
         if (user_acceptability === false) {
@@ -162,14 +159,13 @@ app.get("/Discord/sendrandommeme", async (req, res) => {
                     res.send(`Could not find channel : ${process.env.MEMES_CHANEL_NAME}`)
                 }
             })
-            */
         }
 });
 
 app.get("/Discord/sendrandomgif", async (req, res) => {
-
     if (!req.headers.authorization) {
         res.statusCode = 400;
+        console.log(req.headers);
         res.send("Empty access_token");
     } else {
         const user_info = await get_user_info(req.headers.authorization)

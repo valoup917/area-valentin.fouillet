@@ -118,6 +118,8 @@ class AuthController extends GetxController{
       const path2 = "/storage/store";
       final uri2 =  Uri.http(authority, path2);
 
+      print("ping to $uri2");
+
       var response2 = await http.post(
         uri2,
         headers: <String, String>{
