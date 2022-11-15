@@ -11,6 +11,7 @@ import 'globals.dart' as globals;
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Stripe.publishableKey='pk_test_51M457DE7SZok4aIHgk6ef5xcma22HUdR2HsJjnxKnLsF0vLGSQeFrLNPU1TYuIKa7S4Yu29raax5jI8mwPk7W1mH00pSU5Gr1N';
+  Stripe.merchantIdentifier = 'any string works';
   await Firebase.initializeApp().then((value) => Get.put(AuthController()));
   await Settings.init(cacheProvider: SharePreferenceCache());
   runApp(const MyApp());

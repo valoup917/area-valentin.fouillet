@@ -119,12 +119,13 @@ def get_service_token(uuid, service):
     conn = psycopg2.connect(database=db_name, user=user, host=host, password=db_password, port=port)
     conn.autocommit = True
     cursor = conn.cursor()
-    query = "select access_token from credentials where uuid='"+ uuid + "';"
+    query = "select access_token from credentials where uuid='"+ uuid + "' and service='"+ service + "';"
     cursor.execute(query)
     res = cursor.fetchall()
     cursor.close()
     conn.close()
-    return res
+    token = res[0][0]
+    return token
 
 def parse_param(parameter):
     param_list = parameter.split(',')
@@ -159,10 +160,8 @@ def set_access_token(header, route, uuid):
                 req_service = service
     if len(req_service) == 0:
         return
-    res = get_service_token(uuid, req_service)
-    if len(res) > 1 or len(res[0])> 1:
-        token = res[6]
-    header.update({"Authorization": token[0]})
+    token = get_service_token(uuid, req_service)
+    header.update({"Authorization": token})
 
 def set_parameters(params, datas, route, uuid):
     body = {}
@@ -212,21 +211,25 @@ def call_route(route, params, route_params):
         tmp = route
         if (len(route_params[query_index]) != 0):
             tmp = str(tmp) + str(route_params[query_index])
+        logging.error(route_params[header_index])
         response = requests.get(tmp, headers=route_params[header_index], json=route_params[body_index])
     elif(temp == 'post'):
         tmp = route
         if (len(route_params[query_index]) != 0):
             tmp = str(tmp) + str(route_params[query_index])
+        logging.error(route_params[header_index])
         response = requests.post(route, route_params[body_index], route_params[header_index])
     elif(temp == 'delete'):
         tmp = route
         if (len(route_params[query_index]) != 0):
             tmp = str(tmp) + str(route_params[query_index])
+        logging.error(route_params[header_index])
         response = requests.delete(route, route_params[body_index], route_params[header_index])
     elif(temp == 'put'):
         tmp = route
         if (len(route_params[query_index]) != 0):
             tmp = str(tmp) + str(route_params[query_index])
+        logging.error(route_params[header_index])
         response = requests.put(route, route_params[body_index], route_params[header_index])
     else:
         return (404, "Unknown method")

@@ -37,7 +37,7 @@ class _StaivePlusPageState extends State<StaivePlusPage> {
       ),
       CardStaivePlus(
         text: "Staiv +",
-        price: 4.99,
+        price: 5,
         arguments: const ["50 AREAS", "10 secondes de latence", "Backup serveur"],
         shadowColor: const Color.fromARGB(255, 240, 138, 29),
         textColor: Colors.white,
@@ -45,7 +45,7 @@ class _StaivePlusPageState extends State<StaivePlusPage> {
       ),
       CardStaivePlus(
         text: "Staiv Pro +",
-        price: 12.99,
+        price: 12,
         arguments: const ["300 AREAS", "3 secondes de latence", "Notifications","Backup serveur"],
         shadowColor:const Color.fromARGB(255, 16, 4, 87),
         textColor: Colors.white,
