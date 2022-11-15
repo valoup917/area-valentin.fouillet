@@ -100,24 +100,24 @@ function Spotifyrea() {
                 <h2>Add the current user as a follower of a playlist</h2>
             </div>
         </button>
-        <button type="button" className="sact2" onClick={(e) => area_in_db(e, 'caca', 'http://spotify:9125/spotify/pausePlayback')}>
+        <button type="button" className="sact2" onClick={(e) => area_in_db(e, '', 'http://spotify:9125/spotify/pausePlayback')}>
             <div className="sreaction2">
                 <h2>Pause current playback on the user's device</h2>
             </div>
         </button>
-        <button type="button" className="sreact3" onClick={(e) => area_in_db(e, 'caca', 'http://spotify:9125/spotify/resumePlayback')}>
+        <button type="button" className="sreact3" onClick={(e) => area_in_db(e, '', 'http://spotify:9125/spotify/resumePlayback')}>
             <div className="srreaeaction3">
                 <h2>Resume current playback on the user's device</h2>
             </div>
         </button>
         </center>
         <center>
-        <button type="button" className="resact4" onClick={(e) => area_in_db(e, 'caca', 'http://spotify:9125/spotify/skipToNext')}>
+        <button type="button" className="resact4" onClick={(e) => area_in_db(e, '', 'http://spotify:9125/spotify/skipToNext')}>
             <div className="sreaction4">
                 <h2>Skips to next track in the users queue</h2>
             </div>
         </button>
-        <button type="button" className="sact5" onClick={(e) => area_in_db(e, 'caca', 'http://spotify:9125/spotify/skipToPrevious')}>
+        <button type="button" className="sact5" onClick={(e) => area_in_db(e, '', 'http://spotify:9125/spotify/skipToPrevious')}>
             <div className="sreaction5">
                 <h2>Skips to previous track in the users queue</h2>
             </div>

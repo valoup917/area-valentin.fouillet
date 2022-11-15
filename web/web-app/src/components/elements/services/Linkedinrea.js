@@ -67,7 +67,7 @@ function Linkedinrea() {
     return (
         <>
         <div className="backlk">
-        <button type="button" onClick={selectrea}>
+        <button type="button" onClick={services}>
             <div className="gobacklk">
                 Back
             </div>

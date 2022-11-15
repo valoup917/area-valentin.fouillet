@@ -77,7 +77,7 @@ function Githubrea() {
     return (
         <>
         <div className="backgt">
-        <button type="button" onClick={selectrea}>
+        <button type="button" onClick={services}>
             <div className="gobackgt">
                 Back
             </div>

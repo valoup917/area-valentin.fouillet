@@ -41,7 +41,7 @@ function Weather() {
     const handleFields = (value, route) => {
         console.log(value);
         console.log(route);
-        setCookie('action', {data: value, route: route});    
+        setCookie('action', {data: value, route: route});
     }
 
     return (

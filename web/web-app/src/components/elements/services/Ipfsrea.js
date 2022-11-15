@@ -102,14 +102,14 @@ function Ipfsrea() {
                 <h2>Pin a file in your datastore</h2>
             </div>
         </button>
-        <button type="button" className="ipfsract3" onClick={(e) => area_in_db(e, 'caca', 'http://ipfs:9030/ipfs/bootstrapadddefault')}>
+        <button type="button" className="ipfsract3" onClick={(e) => area_in_db(e, '', 'http://ipfs:9030/ipfs/bootstrapadddefault')}>
             <div className="rreaction3">
                 <h2>Add a bootstrap node</h2>
             </div>
         </button>
         </center>
         <center>
-        <button type="button" className="ipfsract4" onClick={(e) => area_in_db(e, 'caca', 'http://ipfs:9030/ipfs/bootstraprmall')}>
+        <button type="button" className="ipfsract4" onClick={(e) => area_in_db(e, '', 'http://ipfs:9030/ipfs/bootstraprmall')}>
             <div className="rreaction4">
                 <h2>Add default bootstrap node</h2>
             </div>
@@ -143,7 +143,7 @@ function Ipfsrea() {
         </button>
         </center>
         <center>
-        <button type="button" className="ipfsrrea10" onClick={(e) => area_in_db(e, 'caca', 'http://ipfs:9030/ipfs/shutdown')}>
+        <button type="button" className="ipfsrrea10" onClick={(e) => area_in_db(e, '', 'http://ipfs:9030/ipfs/shutdown')}>
             <div className="rreaction10">
                 <h2>Shut down your node</h2>
             </div>

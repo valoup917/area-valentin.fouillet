@@ -66,7 +66,7 @@ function Twitchrea() {
     return (
         <>
         <div className="backg">
-        <button type="button" onClick={selectrea}>
+        <button type="button" onClick={serv}>
             <div className="gobacktwitch">
                 Back
             </div>
@@ -98,7 +98,7 @@ function Twitchrea() {
                 <h2>Update current user description</h2>
             </div>
         </button>
-        <button type="button" className="twrract2" onClick={(e) => area_in_db(e, 'caca', 'http://twitch:9135/twitch/raidUser')}>
+        <button type="button" className="twrract2" onClick={(e) => area_in_db(e, '', 'http://twitch:9135/twitch/raidUser')}>
             <div className="twrraction2">
                 <h2>Create a random raid on users that follows current user</h2>
             </div>

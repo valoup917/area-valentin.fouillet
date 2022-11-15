@@ -21,7 +21,7 @@ function Calandarrea() {
 
     function selectrea(e) {
         removeCookie('action');
-        navigate("/services");
+        navigate("/servicesforrea");
     }
 
     async function area_in_db(e, reaction, reaction_data) {
@@ -66,7 +66,7 @@ function Calandarrea() {
     return (
         <>
         <div className="backcal">
-        <button type="button" onClick={selectrea}>
+        <button type="button" onClick={services}>
             <div className="gobackcal">
                 Back
             </div>

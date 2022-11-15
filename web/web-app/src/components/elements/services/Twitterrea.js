@@ -91,7 +91,7 @@ function Twitterrea() {
                 <h5>Choose your twitter action</h5>
                 <span role="img" aria-label="sheep">😃</span>
         </div>
-        <button type="button" className="tract1"  onClick={(e) => toggleAddPopup(e, 'caca', 'http://github:9065/github/updateUserName')}>
+        <button type="button" className="tract1"  onClick={(e) => toggleAddPopup('http://github:9065/github/updateUserName')}>
             <div className="traction1">
                 <h2>Create and Tweets on behalf of a user</h2>
             </div>
