@@ -41,6 +41,20 @@
                 }
             ],
             "loadBalancerStrategy": "ROUND_ROBIN"
+        },
+        "storage": {
+            "index": 0,
+            "instances": [
+                {
+                    "apiName": "storage",
+                    "protocol": "http",
+                    "host": "storage",
+                    "port": 9145,
+                    "url": "http://storage:9145/",
+                    "enabled": true
+                }
+            ],
+            "loadBalancerStrategy": "ROUND_ROBIN"
         }
     }
 }
