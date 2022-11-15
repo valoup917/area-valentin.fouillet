@@ -290,10 +290,10 @@ export default function MultiActionAreaCard(props) {
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardContent>
-          <Typography variant="body2" color="text.secondary">
-            <p>Action :</p>
+          <Typography component={'span'} variant="body2" color="text.secondary">
+            <h4>Action :</h4>
             <b className="padding">{ret(props.area[0][1], 3)}</b>
-            <p>Reaction :</p>
+            <h4>Reaction :</h4>
             <b className="padding">{ret(props.area[2][1], 3)}</b>
           </Typography>
         </CardContent>

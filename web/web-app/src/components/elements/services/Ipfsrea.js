@@ -143,7 +143,7 @@ function Ipfsrea() {
         </button>
         </center>
         <center>
-        <button type="button" className="ipfsrrea10" onClick={(e) => area_in_db(e, '', 'http://ipfs:9030/ipfs/shutdown')}>
+        <button type="button" className="ipfsrrea10" onClick={(e) => area_in_db(e, 'http://ipfs:9030/ipfs/shutdown', '')}>
             <div className="rreaction10">
                 <h2>Shut down your node</h2>
             </div>

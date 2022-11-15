@@ -30,6 +30,7 @@ function Discordrea () {
         const action = cookies.action.route
         const action_data = cookies.action.data
 
+        console.log(action)
         await axios.post(
             'http://localhost:8080/db/ManipulateAreas/newarea',
             {
@@ -93,12 +94,12 @@ function Discordrea () {
                 <h5>Choose your discord reaction</h5>
                 <span role="img" aria-label="sheep">😃</span>
         </div>
-        <button type="button" className="act1" onClick={(e) => area_in_db(e, '', 'http://discord:9010/Discord/sendrandommeme')}>
+        <button type="button" className="act1" onClick={(e) => area_in_db(e, 'http://discord:9010/Discord/sendrandommeme', '')}>
             <div className="reaction1">
                 <h2>Send a random meme on a channel</h2>
             </div>
         </button>
-        <button type="button" className="act2" onClick={(e) => area_in_db(e, '', 'http://discord:9010/Discord/sendrandomgif')}>
+        <button type="button" className="act2" onClick={(e) => area_in_db(e, 'http://discord:9010/Discord/sendrandomgif', '')}>
             <div className="reaction2">
                 <h2>Send a random Gif on a channel</h2>
             </div>

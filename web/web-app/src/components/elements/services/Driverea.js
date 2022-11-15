@@ -21,7 +21,7 @@ function Driverea() {
 
     function selectrea(e) {
         removeCookie('action');
-        navigate("/servicesforrea");
+        navigate("/services");
     }
 
     async function area_in_db(e, reaction, reaction_data) {
