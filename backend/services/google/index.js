@@ -48,6 +48,11 @@ app.get('/google/gmail/getUserMessages', (req, res) => {
                 users.set(email, {'gmail': {'messages': response.data.resultSizeEstimate}});
                 status_code = 400;
             }
+            else if (!users.get(email)['gmail']) {
+                console.log('toto');
+                users.get(email)['gmail'] = {'messages': response.data.resultSizeEstimate};
+                status_code = 400;
+            }
             else {
                 if (users.get(email)['gmail']['messages'] === undefined) {
                     users.get(email)['gmail']['messages'] = response.data.resultSizeEstimate;
@@ -88,6 +93,10 @@ app.get('/google/gmail/getUserDrafts', (req, res) => {
             }
             else if (users.has(email) !== true) {
                 users.set(email, {'gmail': {'drafts': response.data.resultSizeEstimate}});
+                status_code = 400;
+            }
+            else if (!users.get(email)['gmail']) {
+                users.get(email)['gmail'] = {'drafts': response.data.resultSizeEstimate};
                 status_code = 400;
             }
             else {
@@ -132,6 +141,10 @@ app.get('/google/gmail/getUserLabels', (req, res) => {
                 users.set(email, {'gmail': {'labels': response.data.labels.length}});
                 status_code = 400;
             }
+            else if (!users.get(email)['gmail']) {
+                users.get(email)['gmail'] = {'labels': response.data.labels.length};
+                status_code = 400;
+            }
             else {
                 if (users.get(email)['gmail']['labels'] === undefined) {
                     users.get(email)['gmail']['labels'] = response.data.labels.length;
@@ -172,6 +185,10 @@ app.get('/google/gmail/getUserLanguage', (req, res) => {
             }
             else if (users.has(email) !== true) {
                 users.set(email, {'gmail': {'language': response.data.displayLanguage}});
+                status_code = 400;
+            }
+            else if (!users.get(email)['gmail']) {
+                users.get(email)['gmail'] = {'language': response.data.displayLanguage};
                 status_code = 400;
             }
             else {
@@ -247,6 +264,10 @@ app.get('/google/gmail/getUserFilters', (req, res) => {
                 users.set(email, {'gmail': {'filters': response.data.filter.length}});
                 status_code = 400;
             }
+            else if (!users.get(email)['gmail']) {
+                users.get(email)['gmail'] = {'filters': response.data.filter.length};
+                status_code = 400;
+            }
             else {
                 if (users.get(email)['gmail']['filters'] === undefined) {
                     users.get(email)['gmail']['filters'] = response.data.filter.length;
@@ -287,6 +308,10 @@ app.get('/google/gmail/getUserSendAs', (req, res) => {
             }
             else if (users.has(email) !== true) {
                 users.set(email, {'gmail': {'sendAs': response.data.sendAs.length}});
+                status_code = 400;
+            }
+            else if (!users.get(email)['gmail']) {
+                users.get(email)['gmail'] = {'sendAs': response.data.sendAs.length};
                 status_code = 400;
             }
             else {
@@ -424,6 +449,10 @@ app.get('/google/calendar/getUserEvents', (req, res) => {
                 users.set(email, {'calendar': {'events': response.data.items.length}});
                 status_code = 400;
             }
+            else if (!users.get(email)['calendar']) {
+                users.get(email)['calendar'] = {'events': response.data.items.length};
+                status_code = 400;
+            }
             else {
                 if (users.get(email)['calendar']['events'] === undefined) {
                     users.get(email)['calendar']['events'] = response.data.items.length;
@@ -535,6 +564,10 @@ app.get('/google/drive/listFiles', (req, res) => {
             }
             else if (users.has(email) !== true) {
                 users.set(email, {'drive': {'files': response.data.files.length}});
+                status_code = 400;
+            }
+            else if (!users.get(email)['drive']) {
+                users.get(email)['drive'] = {'files': response.data.files.length};
                 status_code = 400;
             }
             else {
@@ -655,6 +688,10 @@ app.get('/google/drive/listComment', (req, res) => {
                     users.set(email, {'drive': {'comments': { [fileId]: response.data.comments.length}}});
                     status_code = 400;
                 }
+                else if (!users.get(email)['drive']) {
+                    users.get(email)['drive'] = {'comments': { [fileId]: response.data.comments.length}};
+                    status_code = 400;
+                }    
                 else {
                     if (users.get(email)['drive']['comments'][fileId] === undefined) {
                         users.get(email)['drive']['comments'][fileId] = response.data.comments.length;
@@ -800,6 +837,10 @@ app.get('/google/youtube/listLikedVideos', (req, res) => {
                 users.set(email, {'youtube': {'liked': response.data.items.length}});
                 status_code = 400;
             }
+            else if (!users.get(email)['youtube']) {
+                users.get(email)['youtube'] = {'liked': response.data.items.length};
+                status_code = 400;
+            }
             else {
                 if (users.get(email)['youtube']['liked'] === undefined) {
                     users.get(email)['youtube']['liked'] = response.data.items.length;
@@ -849,6 +890,10 @@ app.get('/google/youtube/listDislikedVideos', (req, res) => {
             }
             else if (users.has(email) !== true) {
                 users.set(email, {'youtube': {'disliked': response.data.items.length}});
+                status_code = 400;
+            }
+            else if (!users.get(email)['youtube']) {
+                users.get(email)['youtube'] = {'disliked': response.data.items.length};
                 status_code = 400;
             }
             else {
