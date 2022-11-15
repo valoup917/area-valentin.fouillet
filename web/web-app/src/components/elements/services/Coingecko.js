@@ -93,19 +93,19 @@ function Coingecko() {
                 <h2>Check if the price of the coin given is correct</h2>
             </div>
         </button>
-        <button type="button" className="cgkact3" onClick={(e) => toggleAddPopup2(e, '', 'http://coingecko:9040/coingecko/checkchangeonehourpercentage')}>
+        <button type="button" className="cgkact3" onClick={(e) => toggleAddPopup2('http://coingecko:9040/coingecko/checkchangeonehourpercentage')}>
             <div className="cgkaction3">
                 <h2>Check change in one hour percentage</h2>
             </div>
         </button>
-        <button type="button" className="cgkact4" onClick={(e) => toggleAddPopup2(e, '', 'http://coingecko:9040/coingecko/checkchangeonedaypercentage')}>
+        <button type="button" className="cgkact4" onClick={(e) => toggleAddPopup2('http://coingecko:9040/coingecko/checkchangeonedaypercentage')}>
             <div className="cgkaction4">
                 <h2>Check change in one day percentage</h2>
             </div>
         </button>
         </center>
         <center>
-        <button type="button" className="cgkact5" onClick={(e) => toggleAddPopup2(e, '', 'http://coingecko:9040/coingecko/checkchangeweekpercentage')}>
+        <button type="button" className="cgkact5" onClick={(e) => toggleAddPopup2('http://coingecko:9040/coingecko/checkchangeweekpercentage')}>
             <div className="cgkaction5">
                 <h2>Check change in one week percentage</h2>
             </div>
