@@ -193,23 +193,29 @@ app.get('/riotgame/maintenance', (req, res) => {
         if (Object.keys(response.data.maintenances).length > 0) {
             res.statusCode = 200
             res.send("Update")
+            return
         } else {
             res.statusCode = 400
             res.send("No update")
+            return
         }
-    }).catch(() => res.sendStatus(503).send("Service Unavailable"))
+    }).catch(() => res.status(503).send("Service Unavailable"))
 })
 
 app.get('/riotgame/ischampioninrotation', async (req, res) => {
+
+    var mystatusCode = 400;
+    var mySend = "";
+
     if (!req.body.champion_name) {
-        res.statusCode = 400
-        res.send("Bad info given, need champion name")
+        mystatusCode = 400
+        mySend = "Bad info given, need champion name";
         return
     }
     const upchampion_name = req.body.champion_name.toUpperCase();
     if(champions.hasOwnProperty(upchampion_name) == false) {
-        res.statusCode = 404
-        res.send("Champion not found")
+        mystatusCode = 404;
+        mySend = "Champion not found";
         return
     }
     var done = false
@@ -223,18 +229,20 @@ app.get('/riotgame/ischampioninrotation', async (req, res) => {
         for(i = 0; i < temp.length; i++) {
             if (temp[i] === champions[upchampion_name]){
                 done = true
-                res.statusCode = 200
-                res.send("Champion in rotation")
+                mystatusCode = 200
+                mySend = "Champion in rotation"
+                break;
             }
         }
     }).catch(function () {
-        res.statusCode = 503
-        res.send("Service not available")
+        mystatusCode = 503
+        mySend = "Service not available";
     })
     if (done == false) {
-        res.statusCode = 400
-        res.send("Champion not in rotation")
+        mystatusCode = 400
+        mySend = "Champion not in rotation"
     }
+    res.status(mystatusCode).send(mySend)
 })
 
 app.listen(process.env['PORT'], () => {

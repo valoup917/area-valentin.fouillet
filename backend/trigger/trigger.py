@@ -271,9 +271,9 @@ def main():
                     update_reaction_state_uuid(area[uuid_index], area[action_index], area[reaction_index], True)
                 else:
                     logging.error('FAILED: reaction'+area[reaction_index]+' failed with code:'+str(code[0])+" "+str(code[1]))
-            if(area[action_done_index] == True and area[reaction_done_index] == True):
-                logging.info('DELETE: area of user:'+area[uuid_index]+' with action:'+area[action_index]+'and reaction:'+area[reaction_index])
-                delete_area_uuid(area[uuid_index], area[action_index], area[reaction_index])
+            #if(area[action_done_index] == True and area[reaction_done_index] == True):
+            #    logging.info('DELETE: area of user:'+area[uuid_index]+' with action:'+area[action_index]+'and reaction:'+area[reaction_index])
+            #    delete_area_uuid(area[uuid_index], area[action_index], area[reaction_index])
             time.sleep(0.5)
         time.sleep(5)
 
